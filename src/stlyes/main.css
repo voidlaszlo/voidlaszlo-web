@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, blockquote {
+  font-size: .9em;
+}
+
+.container {
+  text-align: center;
+  padding: .8em 1.2em;
+}
+
+.container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container header a:link, .container header :visited {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 1px;
+}
+
+.container section {
+  margin-bottom: 10em;
+}
+
+.container section .main-design {
+  width: 49.9%;
+  margin: 3em;
+  margin-bottom: 7em;
+}
+
+.container section h1 span {
+  color: #6B48FF;
+}
+
+.container section p {
+  font-size: 1.1em;
+}
+
+.container main {
+  position: relative;
+  height: 600px;
+  margin-top: -5em;
+  border: 1px solid #AEAEAE;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  background-color: white;
+}
+
+.container footer {
+  margin-top: 2em;
+  font-weight: 700;
+  color: white;
+}
+
+.container footer span {
+  color: #00FF66;
+}
+
+.purple-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6B48FF), to(#362480));
+  background: linear-gradient(#6B48FF, #362480);
+  -webkit-box-shadow: 0px -2px 0px black;
+          box-shadow: 0px -2px 0px black;
+}
+/*# sourceMappingURL=main.css.map */
