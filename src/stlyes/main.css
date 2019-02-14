@@ -50,6 +50,43 @@ p, blockquote {
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 60px;
+      grid-template-rows: 1fr 60px;
+}
+
+.container main .row1 {
+  padding: 2em;
+  line-height: 1.7em;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.15em;
+}
+
+.container main .row2 {
+  background-color: #E6E6E6;
+  border-top: 1px solid #AEAEAE;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main .row2 p {
+  font-weight: 700;
+  font-size: 1em;
 }
 
 .container footer {

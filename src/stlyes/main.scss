@@ -47,7 +47,36 @@ p, blockquote {
         border: 1px solid #AEAEAE;
         border-radius: 25px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-        background-color: white; 
+        background-color: white;
+        display: grid;
+        grid-template-rows: 1fr 60px;
+
+        .row1 {
+            padding: 2em;
+            line-height: 1.7em;
+            justify-self: center;
+            align-self: center;
+            font-size: 1.15em;
+
+        }
+        
+        .row2 {
+            background-color: #E6E6E6;
+            border-top: 1px solid #AEAEAE;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 5fr 1fr;
+            justify-items: center;
+            align-items: center;
+
+            p {
+                font-weight: 700;
+                font-size: 1em;
+            }
+            
+        }
     }
 
     footer {
