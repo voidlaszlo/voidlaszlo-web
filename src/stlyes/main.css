@@ -109,8 +109,8 @@ p, blockquote {
 }
 
 .container .card .row1 .project-item .project-bottom a:link, .container .card .row1 .project-item .project-bottom :visited {
-  color: #00FF66;
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
 }
 
 .container .card .row2 {
