@@ -41,7 +41,7 @@ p, blockquote {
   font-size: 1.1em;
 }
 
-.container main {
+.container .swiper-slide {
   position: relative;
   height: 600px;
   margin-top: -5em;
@@ -54,9 +54,10 @@ p, blockquote {
   display: grid;
   -ms-grid-rows: 1fr 60px;
       grid-template-rows: 1fr 60px;
+  margin-right: 5px;
 }
 
-.container main .row1 {
+.container .swiper-slide .row1 {
   padding: 2em;
   line-height: 1.7em;
   -ms-grid-column-align: center;
@@ -67,7 +68,7 @@ p, blockquote {
   font-size: 1.15em;
 }
 
-.container main .row2 {
+.container .swiper-slide .row2 {
   background-color: #E6E6E6;
   border-top: 1px solid #AEAEAE;
   border-bottom-left-radius: 25px;
@@ -84,7 +85,7 @@ p, blockquote {
           align-items: center;
 }
 
-.container main .row2 p {
+.container .swiper-slide .row2 p {
   font-weight: 700;
   font-size: 1em;
 }
@@ -104,5 +105,12 @@ p, blockquote {
   background: linear-gradient(#6B48FF, #362480);
   -webkit-box-shadow: 0px -2px 0px black;
           box-shadow: 0px -2px 0px black;
+}
+
+@media screen and (max-width: 1024px) {
+  body, html {
+    overflow: auto !important;
+    max-height: 100% !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
