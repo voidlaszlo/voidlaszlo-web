@@ -40,6 +40,9 @@ p, blockquote {
         }
     }
 
+    main {
+    }
+
     .card {
         position: relative;
         height: 600px;
@@ -50,13 +53,49 @@ p, blockquote {
         background-color: white;
         display: grid;
         grid-template-rows: 1fr 60px;
+        margin-right: 4px;
 
         .row1 {
             padding: 2em;
             line-height: 1.7em;
-            justify-self: center;
-            align-self: center;
             font-size: 1.15em;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 1.5em;
+            overflow-y: hidden;
+
+            .project-item {
+                display: grid;
+                grid-template-rows: 1fr 40px;
+                border-radius: 15px;
+                font-size: 0.9em;
+
+                .project-top {
+                    border: 1px solid #aeaeae;
+                    background-color: #E8E8E8;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+
+                .project-bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 2em;
+                    background-color: #9B9B9B;
+                    border: 1px solid #707070;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+
+                    a:link,:visited {
+                        text-decoration: underline;
+                        color: #00FF66;
+                    }
+                }
+            }
 
         }
         
@@ -65,11 +104,10 @@ p, blockquote {
             border-top: 1px solid #AEAEAE;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 5fr 1fr;
-            justify-items: center;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
 
             p {
                 font-weight: 700;

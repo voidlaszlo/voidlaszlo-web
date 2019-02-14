@@ -54,17 +54,63 @@ p, blockquote {
   display: grid;
   -ms-grid-rows: 1fr 60px;
       grid-template-rows: 1fr 60px;
+  margin-right: 4px;
 }
 
 .container .card .row1 {
   padding: 2em;
   line-height: 1.7em;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   font-size: 1.15em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-row-gap: 1.5em;
+  overflow-y: hidden;
+}
+
+.container .card .row1 .project-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 40px;
+      grid-template-rows: 1fr 40px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+.container .card .row1 .project-item .project-top {
+  border: 1px solid #aeaeae;
+  background-color: #E8E8E8;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.container .card .row1 .project-item .project-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 2em;
+  background-color: #9B9B9B;
+  border: 1px solid #707070;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.container .card .row1 .project-item .project-bottom a:link, .container .card .row1 .project-item .project-bottom :visited {
+  text-decoration: underline;
+  color: #00FF66;
 }
 
 .container .card .row2 {
@@ -72,16 +118,16 @@ p, blockquote {
   border-top: 1px solid #AEAEAE;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 1fr 5fr 1fr;
-      grid-template-columns: 1fr 5fr 1fr;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .card .row2 p {
