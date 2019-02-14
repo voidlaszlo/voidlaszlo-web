@@ -91,8 +91,8 @@ p, blockquote {
                     border-bottom-right-radius: 15px;
 
                     a:link,:visited {
-                        text-decoration: underline;
                         color: #00FF66;
+                        text-decoration: none;
                     }
                 }
             }
@@ -138,5 +138,17 @@ p, blockquote {
     overflow: auto!important;
     max-height: 100% !important;
   }
+
+  .mobile-hidden {
+      display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  
+  .normal-hidden {
+      display: none;
+  }
+  
 }
 

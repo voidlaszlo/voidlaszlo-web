@@ -109,8 +109,8 @@ p, blockquote {
 }
 
 .container .card .row1 .project-item .project-bottom a:link, .container .card .row1 .project-item .project-bottom :visited {
-  text-decoration: underline;
   color: #00FF66;
+  text-decoration: none;
 }
 
 .container .card .row2 {
@@ -156,6 +156,15 @@ p, blockquote {
   body, html {
     overflow: auto !important;
     max-height: 100% !important;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .normal-hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
