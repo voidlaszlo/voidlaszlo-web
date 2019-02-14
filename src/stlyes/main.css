@@ -20,12 +20,20 @@ p, blockquote {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.container header .logo {
+  width: 100px;
+}
+
+.container header i {
+  margin-top: 50%;
 }
 
 .container header a:link, .container header :visited {
   text-decoration: none;
   color: inherit;
-  margin-top: 1px;
 }
 
 .container section {
