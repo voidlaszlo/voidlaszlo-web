@@ -23,19 +23,6 @@ p, blockquote {
   margin-bottom: 3em;
 }
 
-.container header .logo {
-  width: 100px;
-}
-
-.container header i {
-  margin-top: 50%;
-}
-
-.container header a:link, .container header :visited {
-  text-decoration: none;
-  color: inherit;
-}
-
 .container section {
   margin-bottom: 10em;
 }
