@@ -8,7 +8,8 @@ body {
   padding: 0;
   font-family: 'Baloo Bhai';
   font-size: 30px;
-  background-color: #00C2FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00C2FF), to(white));
+  background: linear-gradient(to bottom, #00C2FF, white);
 }
 
 .container {
@@ -48,6 +49,10 @@ body {
   margin-right: 1em;
 }
 
+.container section.frontpage section.mobilewelcome {
+  display: none;
+}
+
 .container section.secondpage {
   position: relative;
   text-align: center;
@@ -64,6 +69,10 @@ body {
   margin: 0 auto;
   margin-top: 10%;
   width: 60%;
+}
+
+.container section.secondpage img:nth-of-type(3) {
+  display: none;
 }
 
 .container section.secondpage h2 {
@@ -150,5 +159,154 @@ footer i {
   position: absolute;
   right: 4em;
   top: 2em;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 20px;
+  }
+  #animal1 {
+    display: none;
+  }
+  #animal2 {
+    display: none;
+  }
+  .container {
+    margin: 0;
+  }
+  .background2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #F8F8F8;
+    z-index: -2;
+  }
+  #down1 {
+    position: absolute;
+    bottom: 20px;
+    right: 0.75em;
+    color: white;
+  }
+  .container {
+    margin: 20px 0;
+  }
+  .container section.frontpage {
+    min-height: 100vh;
+    text-align: center;
+  }
+  .container section.frontpage .navbar {
+    text-transform: uppercase;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container section.frontpage .navbar h3 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .container section.frontpage .navbar a, .container section.frontpage .navbar a:link, .container section.frontpage .navbar a:visited {
+    display: none;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 1em;
+  }
+  .container section.frontpage section.mobilewelcome {
+    display: block;
+    margin-top: 100%;
+  }
+  .container section.frontpage section.mobilewelcome h2 {
+    font-size: 52px;
+    margin: 0;
+    line-height: 52px;
+  }
+  .container section.frontpage section.mobilewelcome p {
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+  }
+  .container section.secondpage {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10em;
+  }
+  .container section.secondpage img:nth-of-type(1) {
+    width: 150px;
+  }
+  .container section.secondpage img:nth-of-type(2) {
+    display: none;
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 80%;
+  }
+  .container section.secondpage img:nth-of-type(3) {
+    display: inline-block;
+    width: 65%;
+    margin-top: 35%;
+  }
+  .container section.secondpage h2 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+  .container section.secondpage p {
+    letter-spacing: 1px;
+    margin: 0;
+    color: #4B4B4B;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .container section.secondpage small {
+    letter-spacing: 1px;
+  }
+  footer {
+    display: none !important;
+    position: relative;
+    top: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 20px;
+    background-color: #4B4B4B;
+    color: #dadada;
+    height: 40px;
+    font-weight: 300;
+  }
+  footer p {
+    margin: 5px 1em;
+  }
+  footer p span {
+    color: white;
+  }
+  footer i {
+    color: #00C2FF;
+  }
+  #language-icons {
+    display: block;
+    position: unset;
+    margin: 20px auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
