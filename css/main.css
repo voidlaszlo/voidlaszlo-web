@@ -164,7 +164,7 @@ footer i {
 @media (min-width: 320px) and (max-width: 480px) {
   body {
     font-size: 20px;
-    padding-bottom: 1em;
+    padding-bottom: -2em;
   }
   #animal1 {
     display: none;
