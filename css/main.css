@@ -164,7 +164,7 @@ footer i {
 @media (min-width: 320px) and (max-width: 480px) {
   body {
     font-size: 20px;
-    padding-bottom: -2em;
+    max-height: 100%;
   }
   #animal1 {
     display: none;
@@ -190,7 +190,8 @@ footer i {
     color: white;
   }
   .container {
-    margin: 20px 0;
+    margin: 0;
+    margin-top: 20px;
   }
   .container section.frontpage {
     min-height: 100vh;
@@ -242,7 +243,7 @@ footer i {
     position: relative;
     text-align: center;
     margin: 0 auto;
-    margin-top: 10em;
+    margin-top: 7em;
   }
   .container section.secondpage img:nth-of-type(1) {
     width: 150px;
@@ -250,13 +251,13 @@ footer i {
   .container section.secondpage img:nth-of-type(2) {
     display: none;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 0;
     width: 80%;
   }
   .container section.secondpage img:nth-of-type(3) {
     display: inline-block;
     width: 65%;
-    margin-top: 35%;
+    margin-top: 6em;
   }
   .container section.secondpage h2 {
     -webkit-box-sizing: border-box;

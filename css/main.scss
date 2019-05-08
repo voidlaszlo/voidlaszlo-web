@@ -156,7 +156,7 @@ footer {
 
     body {
         font-size: 20px;
-        padding-bottom: -2em;
+        max-height: 100%;
     }
   
   #animal1 {
@@ -188,7 +188,8 @@ footer {
 }
 
 .container {
-    margin: 20px 0;
+    margin: 0;
+    margin-top: 20px;
 
     section.frontpage {
 
@@ -243,7 +244,7 @@ footer {
         position: relative;
         text-align: center;
         margin:  0 auto;
-        margin-top: 10em;
+        margin-top: 7em;
 
         img:nth-of-type(1) {
             width: 150px;
@@ -252,14 +253,14 @@ footer {
         img:nth-of-type(2) {
             display: none;
             margin: 0 auto;
-            margin-top: 10%;
+            margin-top: 0;
             width: 80%;
         }
 
         img:nth-of-type(3) {
             display: inline-block;
             width: 65%;
-            margin-top: 35%;
+            margin-top: 6em;
         }
 
         h2 {
