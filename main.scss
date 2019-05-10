@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900');
+
+:root {
+  --home: #D8D8D8; 
+  --about: #00B9FF;
+  --contacts : #000000;
+}
+
+html {
+    background-color: var(--home);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    h1 {
+        font-size: 40px;
+        font-weight: 900;                
+    }
+
+    ul {
+        list-style: none;
+        font-size: 25px;
+
+        li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        li:nth-of-type(1) {
+            color: var(--home);
+        }
+
+        li:nth-of-type(2) {
+            color: var(--about);
+        }
+
+        li:nth-of-type(3) {
+            color: var(--contacts);
+        }
+    }
+}
+
+.home-page {
+    background-color: var(--home);
+    height: 100vh;
+    text-align: center;
+
+    .home-container {
+        height: 100%;;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3;
+        justify-items: center;
+        align-items: center;
+
+        section.home-middle-text {
+            grid-row: 2;
+            grid-column: 2;
+            text-transform: uppercase;            
+
+            h2 {
+                font-weight: 900;
+                font-size: 35px;
+                color: black;
+                margin: 0;
+                letter-spacing: 4px;
+            }
+
+            p {
+                font-size: 25px;
+                font-weight: 900;
+                margin: 0;
+                margin-top: -15px;
+                letter-spacing: 2px;
+                color: var(--about);
+            }
+        }
+
+        section.home-bottom-text {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: end;
+            justify-self: end;
+            margin-bottom: 1em;
+            justify-items: end;            
+            text-transform: uppercase;
+            text-align: left;
+            letter-spacing: 3px; 
+            
+            small {
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                color: black;
+            }
+            
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 22px;
+                color: black; 
+
+                span {
+                   font-weight: 600;                   
+                }
+            }
+        }
+
+        i {
+            color: black;
+            grid-row: 3;
+            align-self: end;
+            margin-bottom: 0.6em;
+        }
+
+    }
+}
+
+.about-page {
+    height: 106vh;
+    background-color: var(--about);
+
+    .about-container {
+        height: 100%;
+        width: 40%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 45% 30%;
+        justify-items: center;
+        align-items: center;
+
+        .about-top-text {
+            text-align: center;
+            grid-row: 2;
+            p {
+                font-size: 26px;
+                letter-spacing: 2px;
+            }
+
+            span {
+                color: var(--contacts);
+            }
+        }
+
+        .about-bottom-text {
+            text-align: left;
+            grid-row: 3;
+            border-radius: 15px;
+            padding: 1em;
+            background-color: #0092C9;
+            box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
+            font-size: 1.2em;
+
+            h3 {
+                color: var(--about);
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+                margin-top: -0.5em;
+            }
+        }
+
+    }
+}
+
+.contact-page {
+    background-color: var(--contacts);
+    height: 100vh;
+}

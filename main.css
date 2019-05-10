@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900");
+:root {
+  --home: #D8D8D8;
+  --about: #00B9FF;
+  --contacts: #000000;
+}
+
+html {
+  background-color: var(--home);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.navbar ul {
+  list-style: none;
+  font-size: 25px;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar ul li:nth-of-type(1) {
+  color: var(--home);
+}
+
+.navbar ul li:nth-of-type(2) {
+  color: var(--about);
+}
+
+.navbar ul li:nth-of-type(3) {
+  color: var(--contacts);
+}
+
+.home-page {
+  background-color: var(--home);
+  height: 100vh;
+  text-align: center;
+}
+
+.home-page .home-container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 3;
+      grid-template-rows: 3;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .home-container section.home-middle-text {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  text-transform: uppercase;
+}
+
+.home-page .home-container section.home-middle-text h2 {
+  font-weight: 900;
+  font-size: 35px;
+  color: black;
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+.home-page .home-container section.home-middle-text p {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: -15px;
+  letter-spacing: 2px;
+  color: var(--about);
+}
+
+.home-page .home-container section.home-bottom-text {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-bottom: 1em;
+  justify-items: end;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 3px;
+}
+
+.home-page .home-container section.home-bottom-text small {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: black;
+}
+
+.home-page .home-container section.home-bottom-text p {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  color: black;
+}
+
+.home-page .home-container section.home-bottom-text p span {
+  font-weight: 600;
+}
+
+.home-page .home-container i {
+  color: black;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: 0.6em;
+}
+
+.about-page {
+  height: 106vh;
+  background-color: var(--about);
+}
+
+.about-page .about-container {
+  height: 100%;
+  width: 40%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 25% 45% 30%;
+      grid-template-rows: 25% 45% 30%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-page .about-container .about-top-text {
+  text-align: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.about-page .about-container .about-top-text p {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.about-page .about-container .about-top-text span {
+  color: var(--contacts);
+}
+
+.about-page .about-container .about-bottom-text {
+  text-align: left;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #0092C9;
+  -webkit-box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
+          box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
+  font-size: 1.2em;
+}
+
+.about-page .about-container .about-bottom-text h3 {
+  color: var(--about);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  margin-top: -0.5em;
+}
+
+.contact-page {
+  background-color: var(--contacts);
+  height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */
