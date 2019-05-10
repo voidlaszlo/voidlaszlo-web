@@ -312,25 +312,24 @@ body {
   }
   .about-page .about-container {
     height: 100%;
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
-    display: unset;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 25% 45% 30%;
-        grid-template-rows: 25% 45% 30%;
-    justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .about-page .about-container .about-top-text {
+    margin-top: 5em;
+    margin-bottom: 7em;
     text-align: center;
-    -ms-grid-row: 2;
-    grid-row: 2;
+    width: 80%;
   }
   .about-page .about-container .about-top-text p {
-    font-size: 26px;
+    font-size: 18px;
     letter-spacing: 2px;
   }
   .about-page .about-container .about-top-text span {
@@ -338,14 +337,13 @@ body {
   }
   .about-page .about-container .about-bottom-text {
     text-align: left;
-    -ms-grid-row: 3;
-    grid-row: 3;
+    width: 80%;
     border-radius: 15px;
     padding: 1em;
     background-color: #0092C9;
     -webkit-box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
             box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .about-page .about-container .about-bottom-text h3 {
     color: var(--about);

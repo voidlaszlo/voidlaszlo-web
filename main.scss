@@ -291,19 +291,19 @@ body {
 
     .about-container {
         height: 100%;
-        width: 40%;
+        width: 100%;
         margin: 0 auto;
-        display: unset;
-        grid-template-columns: 1fr;
-        grid-template-rows: 25% 45% 30%;
-        justify-items: center;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
 
         .about-top-text {
+            margin-top: 5em;
+            margin-bottom: 7em;
+
             text-align: center;
-            grid-row: 2;
+            width: 80%;
             p {
-                font-size: 26px;
+                font-size: 18px;
                 letter-spacing: 2px;
             }
 
@@ -314,12 +314,12 @@ body {
 
         .about-bottom-text {
             text-align: left;
-            grid-row: 3;
+            width: 80%;
             border-radius: 15px;
             padding: 1em;
             background-color: #0092C9;
             box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
-            font-size: 1.2em;
+            font-size: 1em;
 
             h3 {
                 color: var(--about);
