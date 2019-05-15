@@ -465,4 +465,65 @@ body {
             transform: translateY(5px);
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1921px) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-animation: showUp 3s;
+            animation: showUp 3s;
+  }
+  .navbar h1 {
+    font-size: 30px;
+    font-weight: 900;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.2)));
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    color: white;
+    padding: 0.05em 0.25em;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+  .navbar ul {
+    font-size: 22px;
+  }
+  .navbar ul li {
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .home-page .home-container section.home-middle-text img {
+    width: 100%;
+    margin-top: 10vh;
+  }
+  .home-page .home-container section.home-bottom-text small {
+    font-size: 16px;
+  }
+  .home-page .home-container section.home-bottom-text p {
+    font-size: 18px;
+  }
+  .home-page .home-container i {
+    color: black;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    margin-bottom: 0.6em;
+    cursor: pointer;
+    -webkit-animation: movingDown 2s linear infinite, showUp 3s;
+            animation: movingDown 2s linear infinite, showUp 3s;
+  }
+}
 /*# sourceMappingURL=main.css.map */
