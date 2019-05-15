@@ -57,6 +57,10 @@ body {
         li:nth-of-type(3) {
             color: var(--contacts);
         }
+
+        li:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -96,7 +100,8 @@ body {
             }
 
             img {
-                animation: rotateImg 2.5s;
+                animation: rotateImg 3s;
+                margin-right: 30x;
             }
             
         }
@@ -138,7 +143,7 @@ body {
             align-self: end;
             margin-bottom: 0.6em;
             cursor: pointer;
-            animation: showUp 3s;
+            animation: movingDown 2s linear infinite;
         }
 
         i:hover {
@@ -258,7 +263,7 @@ body {
 
         section.home-bottom-text {
             text-align: center;
-            margin-top: 20vh;
+            margin-top: 10vh;
             small {
                 margin: 0;
                 padding: 0;
@@ -358,10 +363,28 @@ body {
     }
 
     90% {
-        opacity: 0;
+        opacity: 0.5;
     }
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes movingDown {
+    0% {
+        transform: translateY(+5px)
+    }
+
+    30% {
+        transform: translateY(0px)
+    }
+
+    60% {
+        transform: translateY(-5px)
+    }
+
+    100% {
+        transform: translateY(+5px)
     }
 }
