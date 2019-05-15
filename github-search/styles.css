@@ -80,6 +80,10 @@ main.container div.search-container div.search-input input {
   background-color: #CEE3FF;
 }
 
+main.container div.search-container div.search-input textarea {
+  font-size: 16px;
+}
+
 main.container div.search-container div.search-input #searchButton {
   border: none;
   background: none;
@@ -141,5 +145,26 @@ main.container h3 {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  main.container {
+    margin: 1em;
+  }
+  main.container div.search-container {
+    width: 90%;
+  }
+  main.container div.search-container label {
+    width: 60%;
+  }
+  main.container div.search-container div.search-input {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 80% 20%;
+        grid-template-columns: 80% 20%;
+  }
+  main.container div.search-container div.search-input input {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

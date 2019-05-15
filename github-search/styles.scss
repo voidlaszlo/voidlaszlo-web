@@ -60,6 +60,10 @@ main.container {
                 background-color: #CEE3FF;
             }
 
+            textarea { 
+                font-size: 16px;
+            }
+
             #searchButton {
                 border: none;
                 background: none;
@@ -129,4 +133,29 @@ main.container {
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    main.container {
+        margin: 1em;
+
+        div.search-container {
+            width: 90%;
+
+            label {
+                width: 60%;
+            }
+
+            div.search-input {
+                display: grid;
+                grid-template-columns: 80% 20%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    
 }
