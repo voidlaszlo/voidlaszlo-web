@@ -133,7 +133,7 @@ main.container div.found-container #repos .list-item:nth-of-type(2n) {
   background-color: #CEE3FF;
 }
 
-main.container h2 {
+main.container h3 {
   background-color: darkgrey;
   padding: 0.5em;
   border-radius: 10px;
