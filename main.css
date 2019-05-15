@@ -213,7 +213,7 @@ body {
 }
 
 .about-page .about-container .about-top-text span {
-  color: var(--contacts);
+  font-weight: 700;
 }
 
 .about-page .about-container .about-bottom-text {
