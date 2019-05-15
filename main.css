@@ -32,6 +32,8 @@ body {
           align-items: center;
   text-transform: uppercase;
   font-weight: 900;
+  -webkit-animation: showUp 3s;
+          animation: showUp 3s;
 }
 
 .navbar h1 {
@@ -47,6 +49,7 @@ body {
 .navbar ul li {
   display: inline;
   margin: 0 20px;
+  cursor: pointer;
 }
 
 .navbar ul li:nth-of-type(1) {
@@ -106,6 +109,11 @@ body {
   color: var(--about);
 }
 
+.home-page .home-container section.home-middle-text img {
+  -webkit-animation: rotateImg 2.5s;
+          animation: rotateImg 2.5s;
+}
+
 .home-page .home-container section.home-bottom-text {
   -ms-grid-column: 1;
   grid-column: 1;
@@ -121,6 +129,8 @@ body {
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 3px;
+  -webkit-animation: showUp 3s;
+          animation: showUp 3s;
 }
 
 .home-page .home-container section.home-bottom-text small {
@@ -149,6 +159,13 @@ body {
       -ms-grid-row-align: end;
       align-self: end;
   margin-bottom: 0.6em;
+  cursor: pointer;
+  -webkit-animation: showUp 3s;
+          animation: showUp 3s;
+}
+
+.home-page .home-container i:hover {
+  color: #5D00FF;
 }
 
 .about-page {
@@ -207,7 +224,7 @@ body {
   margin-top: -0.5em;
 }
 
-.project-page {
+.projects-page {
   background-color: var(--contacts);
   height: 100vh;
 }
@@ -336,6 +353,66 @@ body {
     padding: 0;
     text-transform: uppercase;
     margin-top: -0.5em;
+  }
+}
+
+@-webkit-keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

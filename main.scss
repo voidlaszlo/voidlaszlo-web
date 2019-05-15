@@ -29,6 +29,7 @@ body {
     align-items: center;
     text-transform: uppercase;
     font-weight: 900;
+    animation: showUp 3s;
 
     h1 {
         font-size: 40px;
@@ -42,6 +43,7 @@ body {
         li {
             display: inline;
             margin: 0 20px;
+            cursor: pointer;
         }
 
         li:nth-of-type(1) {
@@ -92,6 +94,11 @@ body {
                 letter-spacing: 2px;
                 color: var(--about);
             }
+
+            img {
+                animation: rotateImg 2.5s;
+            }
+            
         }
 
         section.home-bottom-text {
@@ -103,7 +110,8 @@ body {
             justify-items: end;            
             text-transform: uppercase;
             text-align: left;
-            letter-spacing: 3px; 
+            letter-spacing: 3px;
+            animation: showUp 3s; 
             
             small {
                 margin: 0;
@@ -129,6 +137,12 @@ body {
             grid-row: 3;
             align-self: end;
             margin-bottom: 0.6em;
+            cursor: pointer;
+            animation: showUp 3s;
+        }
+
+        i:hover {
+            color: #5D00FF;
         }
 
     }
@@ -182,7 +196,7 @@ body {
     }
 }
 
-.project-page {
+.projects-page {
     background-color: var(--contacts);
     height: 100vh;
 }
@@ -239,6 +253,7 @@ body {
                 margin-top: 13vh;
                 margin-right: 19px;
             }
+            
         }
 
         section.home-bottom-text {
@@ -318,4 +333,35 @@ body {
     }
 }
   
+}
+
+@keyframes rotateImg {
+    0% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+
+    90% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
