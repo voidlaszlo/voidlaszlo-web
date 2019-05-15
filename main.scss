@@ -3,7 +3,7 @@
 :root {
   --home: #D8D8D8; 
   --about: #5D00FF;
-  --contacts : #000000;
+  --contacts : #0c0c0c;
 }
 
 html {
@@ -33,7 +33,13 @@ body {
 
     h1 {
         font-size: 40px;
-        font-weight: 900;                
+        font-weight: 900;
+        background: linear-gradient(to left, rgba(255,255,255,0.2), rgba(0,0,0,0.2));
+        color: white;
+        padding: 0.15em 0.5em;
+        border-radius: 15px;  
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        border: 1px solid white;              
     }
 
     ul {
@@ -220,7 +226,11 @@ body {
 
     h1 {
         font-size: 40px;
-        font-weight: 900;                
+        font-weight: 900;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        border: none;                
     }
 
     ul {
