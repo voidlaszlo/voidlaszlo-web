@@ -44,8 +44,6 @@ body {
   color: white;
   padding: 0.15em 0.5em;
   border-radius: 15px;
-  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   border: 1px solid white;
 }
 
@@ -173,8 +171,8 @@ body {
       align-self: end;
   margin-bottom: 0.6em;
   cursor: pointer;
-  -webkit-animation: movingDown 2s linear infinite;
-          animation: movingDown 2s linear infinite;
+  -webkit-animation: movingDown 2s linear infinite, showUp 3s;
+          animation: movingDown 2s linear infinite, showUp 3s;
 }
 
 .home-page .home-container i:hover {
@@ -414,9 +412,6 @@ body {
   0% {
     opacity: 0;
   }
-  90% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 1;
   }
@@ -425,9 +420,6 @@ body {
 @keyframes showUp {
   0% {
     opacity: 0;
-  }
-  90% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
