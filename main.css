@@ -142,6 +142,7 @@ body {
   letter-spacing: 3px;
   -webkit-animation: showUp 3s;
           animation: showUp 3s;
+  margin-left: 2em;
 }
 
 .home-page .home-container section.home-bottom-text small {
