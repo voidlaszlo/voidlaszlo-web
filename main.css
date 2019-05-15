@@ -194,8 +194,8 @@ body {
   border-radius: 15px;
   padding: 1em;
   background-color: #33008b;
-  -webkit-box-shadow: inset 0px 2px 6px #33008b;
-          box-shadow: inset 0px 2px 6px #33008b;
+  -webkit-box-shadow: inset 0px 2px 10px #09001a;
+          box-shadow: inset 0px 2px 10px #09001a;
   font-size: 1.2em;
 }
 
@@ -212,7 +212,7 @@ body {
   height: 100vh;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .navbar {
     position: unset;
     height: 100px;
