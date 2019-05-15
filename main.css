@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900");
 :root {
   --home: #D8D8D8;
-  --about: #00B9FF;
+  --about: #5D00FF;
   --contacts: #000000;
 }
 
@@ -193,9 +193,9 @@ body {
   grid-row: 3;
   border-radius: 15px;
   padding: 1em;
-  background-color: #0092C9;
-  -webkit-box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
-          box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
+  background-color: #33008b;
+  -webkit-box-shadow: inset 0px 2px 6px #33008b;
+          box-shadow: inset 0px 2px 6px #33008b;
   font-size: 1.2em;
 }
 
@@ -207,7 +207,7 @@ body {
   margin-top: -0.5em;
 }
 
-.contact-page {
+.project-page {
   background-color: var(--contacts);
   height: 100vh;
 }
@@ -262,27 +262,15 @@ body {
     -ms-grid-column: 2;
     grid-column: 2;
     text-transform: uppercase;
-    display: none;
   }
-  .home-page .home-container section.home-middle-text h2 {
-    font-weight: 900;
-    font-size: 30px;
-    color: black;
-    margin: 0;
-    letter-spacing: 4px;
-    margin-top: 4em;
-  }
-  .home-page .home-container section.home-middle-text p {
-    font-size: 25px;
-    font-weight: 900;
-    margin: 0;
-    margin-top: -15px;
-    letter-spacing: 2px;
-    color: var(--about);
+  .home-page .home-container section.home-middle-text img {
+    width: 90%;
+    margin-top: 13vh;
+    margin-right: 19px;
   }
   .home-page .home-container section.home-bottom-text {
     text-align: center;
-    margin-top: 50vh;
+    margin-top: 20vh;
   }
   .home-page .home-container section.home-bottom-text small {
     margin: 0;
@@ -340,9 +328,6 @@ body {
     width: 80%;
     border-radius: 15px;
     padding: 1em;
-    background-color: #0092C9;
-    -webkit-box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
-            box-shadow: inset 0px 2px 6px rgba(0, 72, 121, 0.9);
     font-size: 1em;
   }
   .about-page .about-container .about-bottom-text h3 {
