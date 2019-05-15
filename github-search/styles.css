@@ -165,6 +165,7 @@ main.container h3 {
   }
   main.container div.search-container div.search-input input {
     width: 100%;
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
