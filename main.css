@@ -17,6 +17,10 @@ body {
   color: white;
 }
 
+#thumbnail {
+  display: none;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
