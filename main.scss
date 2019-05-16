@@ -20,6 +20,9 @@ body {
 
 #thumbnail {
     display: none;
+    background-image: url(/000thumbnail.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar {
