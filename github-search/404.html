@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search GitHub User</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="search-container">
+                <label for="searchUser"><span>Search</span>for a Github user</label>
+                <div class="search-input">
+                        <input type="text" id="searchUser">
+                        <button id="searchButton">GO</button>
+                </div>
+        </div>
+        <div class="found-container hidden">
+            <p id="userId"></p>
+            <img src="" alt="" id="userImg">
+            <h2>repos</h2>
+            <ul id="repos"></ul>
+        </div>
+
+        <h3>made by voidlaszlo</h3>
+    </main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
