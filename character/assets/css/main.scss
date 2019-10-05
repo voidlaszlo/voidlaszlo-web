@@ -189,9 +189,31 @@ div#display {
                 padding: 0.25em 1em;
                 margin: 5px;
                 border: 1px solid $color-secondary;
+                text-align: center;
             }
         }
 
     }
 
+}
+
+footer {
+    margin-top: 5vh;
+    padding: 1em;
+    background-color: black;
+    text-align: center;
+    
+
+    p {
+        margin: 0;
+        color: white;
+    }
+
+    span {
+        color: $color-secondary;
+    }
+
+    a, a:link, a:visited {
+        color: $color-secondary;
+    }
 }
