@@ -29,7 +29,7 @@ searchButton.addEventListener('click', function(e) {
         })
     })
     .catch(err => console.log(err));
-    searchUser.value = null;
+    searchUser.value = null;    
 
     foundContainer.classList.remove('hidden')
     
