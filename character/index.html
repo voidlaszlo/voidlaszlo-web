@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>character manager</h1>
+
+    </header>
+
+    <main>
+
+        <h1>The Manager</h1>
+
+        <div class="manage">
+    
+            <div class="manage-left">
+    
+                <label for="character_name">Character's name:</label><br>
+                <input type="text" placeholder="character's name" name="character_name" id="character_name" maxlength="16"><br>
+    
+                <label for="chararacter_description">Description:</label><br>
+                <input type="text" placeholder="description" name="character_description" id="character_description" maxlength="125"><br>
+    
+                <label for="ability_name">Ability Name:</label><br>
+                <input type="text" placeholder="ability name" name="ability_name" id="ability_name"  maxlength="16"><br>
+    
+                <label for="ability_description">Ability Description:</label><br>
+                <input type="text" placeholder="ability description" name="ability_description" id="ability_description" maxlength="50"><br>
+    
+            </div>
+    
+            <div class="manage-right">
+                <button id="add_character_btn">ADD CHARACTER</button>
+            </div>
+    
+        </div>
+
+        <div class="character-title">
+            <h1>The Characters</h1><input type="text" placeholder="search character.." id="search_input">
+        </div>
+
+        <div id="display">
+
+            <div class="character">
+
+                <h2>Character Name</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur cumque ab obcaecati saepe dicta quae eius libero tempore dignissimos explicabo asperiores reiciendis.</p>
+                    
+                <div class="character-abilites">
+                    <h2>Abilities : </h2>
+                    <p title="first_desc">Ability</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    
+<script src="./app/app.js"></script>
+</body>
+</html>

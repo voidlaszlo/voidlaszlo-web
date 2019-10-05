@@ -1,0 +1,195 @@
+// COLORS
+$color-bg : rgb(10, 7, 17);
+$color-primary : rgb(32, 28, 71);
+$color-secondary : rgb(122, 255, 166);
+
+// BREAKPOINTS
+$breakpoint-tablet : 1300px;
+
+body {
+    margin:0; padding:0;
+    font-family: 'Titillium Web', cursive;
+    background-color: $color-bg;
+}
+
+// HEADER
+header {
+    background-color: $color-primary;
+    padding: 0.5em 15vw;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        justify-content: center;
+        padding: 0;
+    }
+    
+
+    h1 {
+        margin: 0;
+        color: $color-secondary;
+        padding: 0.5em;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            text-align: center;
+        }
+    }
+}
+
+// MAIN
+main {
+    padding: 2em 15vw;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 3em;
+        color: $color-secondary;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.4em;
+        color: white;
+    }
+
+    div.character-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5vh 0;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+        }
+
+        #search_input {
+            background-color: black;
+            border: none;
+            padding: 1em;
+            border-radius: 15px;
+            height: 100%;
+            color: white;
+        }
+    }
+
+    
+}
+
+// MANAGE
+div.manage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7), 10px 15px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid darken($color-primary, 10);
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    div.manage-left {
+        padding: 1em;
+
+        label {
+            color: $color-secondary;
+        }
+        
+        input {
+            width: 100%;
+            border: none;
+            padding: 1em;
+            background-color: black;
+            color: white;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                padding: 1em 0;
+
+                &::placeholder {
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+
+    div.manage-right {
+        padding: 1em;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: $color-primary;
+            border: 2px solid $color-secondary;
+            color: white;
+            font-size: 4em;
+            outline: none;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                font-size: 2em;
+            }
+            
+            &:hover {
+                color: $color-secondary;
+                box-shadow: inset 3px 6px 15px rgba(0, 0, 0, 0.9);
+                transition: 100ms ease-out;
+            }
+        }
+    }
+}
+
+// DISPLAY
+div#display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    div.character {
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
+        border: 1px solid $color-primary;
+        padding: 1em 3em;
+        height: 350px;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            flex: 100%;
+            height: unset;
+            min-height: 300px;
+            margin: 1em;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+
+        h2 {
+            color: $color-secondary;
+            font-size: 2em;
+        }
+
+        p {
+            flex-grow: 1;
+        }
+
+        div.character-abilites {
+            justify-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                width: 70%;
+            }
+
+            p {
+                padding: 0.25em 1em;
+                margin: 5px;
+                border: 1px solid $color-secondary;
+            }
+        }
+
+    }
+
+}
