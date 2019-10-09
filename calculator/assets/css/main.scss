@@ -1,0 +1,66 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+div.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #eee;
+    
+    // GRID
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "op op"
+    "n nr"
+    "nb nr";
+
+    @media screen and(max-width: 550px) {
+        margin-top: 1em;
+        width: 90%;
+    }
+
+    div#output {
+        position: relative;
+        grid-area : op;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+
+        p {
+            color: white;
+            margin-left: 1em;
+            font-size: 2em;
+            
+        }
+
+        small {
+            position: absolute;
+            top: 5px;
+            right: 5px;;
+            color: #eee;
+        }
+    }
+
+    div#numbers {
+        grid-area: n;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div#numbers-right {
+        grid-area: nr;
+    }
+
+    div#numbers-bottom {
+        grid-area: nb;
+        display: flex;
+        flex-direction: row;
+    }
+    button {
+        padding: 1em;
+        width: 100%;
+    }
+}
