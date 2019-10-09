@@ -132,6 +132,10 @@ function registerEventListeners() {
                 }
                 result = Math.pow(result, 2)
                 break
+
+            default : 
+                result = numbers[0]
+                break;
         }
 
         output.innerText = result
