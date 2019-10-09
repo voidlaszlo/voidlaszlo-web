@@ -15,8 +15,16 @@ let operator
 let result = 0
 let string = ""
 
+// INIT
+init()
+
 // FUNCTIONS
-clear()
+function init() {
+    clear()
+    registerEventListeners()
+}
+
+// ADDING EVENT LISTENERS
 function registerEventListeners() {
 
     // EVENT LISTENER ON THE OPERATOR BUTONS
@@ -27,7 +35,6 @@ function registerEventListeners() {
                 operator = e.target.innerText
                 string += `${number} ${operator} `
                 prevOps.innerText = string
-                console.log("hey its nohing")
             } else {
                 
                 operator = e.target.innerText
@@ -65,19 +72,14 @@ function registerEventListeners() {
     equals.addEventListener('click', (e) => {
         result = 0
         numbers.push(number)
-        console.log("Pushed")
 
         switch(operator) {
             case "+":
                 for(let number of numbers) {
                     result += parseFloat(number)
-                    console.log(result)
                 }
-                output.innerText = result
-                string += `${number} = ${result}`
-                operator = ""
-                number = ""
                 break
+                
 
             case "-":
                 for(let i = 0; i < numbers.length; i++) {
@@ -87,17 +89,60 @@ function registerEventListeners() {
                         result -= numbers[i]
                     }
                 }
-                output.innerText = result
-                string += `${number} = ${result}`
-                operator = ""
-                number = ""
+                break
+
+            case "*":
+                for(let i = 0; i < numbers.length; i++) {
+                    if(i == 0) {
+                        result = numbers[i]
+                    } else {
+                        result *= numbers[i]
+                    }
+                }
+                break
+
+            case "/":
+                for(let i = 0; i < numbers.length; i++) {
+                    if(i == 0) {
+                        result = numbers[i]
+                    } else {
+                        result /= numbers[i]
+                    }
+                }
+                break
+
+            case "√x":
+                for(let i = 0; i < numbers.length; i++) {
+                    if(i == 0) {
+                        result = numbers[i]
+                    } else {
+                        
+                    }
+                }
+                result = Math.sqrt(result)
+                break
+
+            case "x2":
+                for(let i = 0; i < numbers.length; i++) {
+                    if(i == 0) {
+                        result = numbers[i]
+                    } else {
+
+                    }
+                }
+                result = Math.pow(result, 2)
                 break
         }
 
+        output.innerText = result
+        string += `${number} = ${result}`
+        operator = ""
+        number = ""
+
+        // SET THE NUMBERS ARRAY TO THE RESULT ONLY
         numbers = [result]
         
         output.innerHTML = `<p>${result.toString()}</p><small>${string}</small>`
-        console.log("The numbers array is " + numbers + " The result is : " + result)
     })
 
     // EVENT LISTENER ON THE CLEAR BUTTON
@@ -113,6 +158,7 @@ function registerEventListeners() {
 
 }
 
+// CLEAR EVERYTHING FUNCTION
 function clear() {
     string = ""
     numbers = []
@@ -121,10 +167,9 @@ function clear() {
     output.innerHTML = `<p>${result}</p><small></small>`
 }
 
+// DELETE LAST CHARACTER FUNCTION
 function deleteLastCharacter(str) {
     let newStr = str.substring(0, str.length -1)
     str = newStr
     return str
 }
-
-registerEventListeners()

@@ -6,14 +6,15 @@
 }
 
 div.container {
-  width: 50%;
-  margin: 0 auto;
+  width: 80%;
+  max-width: 700px;
+  margin: 30vh auto;
   background-color: #eee;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 1fr;
       grid-template-columns: 3fr 1fr;
-      grid-template-areas: "op op" "n nr" "nb nr";
+      grid-template-areas: "op op" "nt nt" "n nr" "nb nr";
 }
 
 @media screen and (max-width: 500px) {
@@ -53,7 +54,7 @@ div.container div#output small {
 }
 
 div.container div#numbers {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: n;
   display: -ms-grid;
@@ -63,14 +64,14 @@ div.container div#numbers {
 }
 
 div.container div#numbers-right {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: nr;
 }
 
 div.container div#numbers-bottom {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: nb;
   display: -webkit-box;
@@ -80,6 +81,17 @@ div.container div#numbers-bottom {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+div.container div#numbers-top {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nt;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 div.container button {
