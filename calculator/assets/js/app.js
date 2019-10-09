@@ -70,7 +70,7 @@ function registerEventListeners() {
         switch(operator) {
             case "+":
                 for(let number of numbers) {
-                    result += parseInt(number)
+                    result += parseFloat(number)
                     console.log(result)
                 }
                 output.innerText = result
@@ -108,16 +108,17 @@ function registerEventListeners() {
     // EVENT LISTENRE ON THE DELETE BUTTN
     deleteBtn.addEventListener('click', (e) => {
         number = deleteLastCharacter(number)
-        output.innerHTML = `<p>${number}</p>`
+        output.innerHTML = `<p>${number}</p><small>${string}</small>`
     })
 
 }
 
 function clear() {
+    string = ""
     numbers = []
     result = 0
     number = ""
-    output.innerHTML = `<p>${result}</p>`
+    output.innerHTML = `<p>${result}</p><small></small>`
 }
 
 function deleteLastCharacter(str) {
