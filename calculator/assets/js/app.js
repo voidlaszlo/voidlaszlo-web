@@ -29,40 +29,42 @@ function registerEventListeners() {
 
     // EVENT LISTENER ON THE OPERATOR BUTONS
     for(button of operatorBtns) {
+
         button.addEventListener('click', (e) => {
 
+            operator = e.target.innerText
+            string += `${number} ${operator} `
+            prevOps.innerText = string
+
             if(number == "") {
-                operator = e.target.innerText
-                string += `${number} ${operator} `
-                prevOps.innerText = string
-            } else {
                 
-                operator = e.target.innerText
+                // DO NOTHING
+
+            } else {   
+                
                 numbers.push(number)
-                string += `${number} ${operator} `
-                prevOps.innerText = string
                 number = ""
 
             }
+
         })
+
     }
 
     // EVENT LISTENER ON THE NUMBER BUTONS
     for(button of numberBtns) {
+
         button.addEventListener('click', (e) => {
+
+            number += e.target.innerText
+            output.innerHTML = `<p>${number}</p><small>${string}</small>`
                         
             if(result !== 0 && number == "" && operator == "") {
+
                 string = ""
                 numbers = []
-                result = 0
-                number += e.target.innerText
-                output.innerHTML = `<p>${number}</p><small>${string}</small>`
-            } else if(numbers.length >= 1 && number == "") {
-                number += e.target.innerText
-                output.innerHTML = `<p>${number}</p><small>${string}</small>`
-            } else {
-                number += e.target.innerText
-                output.innerHTML = `<p>${number}</p><small>${string}</small>`
+                result = 0                
+
             }
 
         })
@@ -73,72 +75,39 @@ function registerEventListeners() {
         result = 0
         numbers.push(number)
 
-        switch(operator) {
-            case "+":
-                for(let number of numbers) {
-                    result += parseFloat(number)
-                }
-                break
-                
+        for(let i = 0; i < numbers.length; i++){
 
-            case "-":
-                for(let i = 0; i < numbers.length; i++) {
-                    if(i == 0) {
-                        result = numbers[i]
-                    } else {
-                        result -= numbers[i]
-                    }
-                }
-                break
-
-            case "*":
-                for(let i = 0; i < numbers.length; i++) {
-                    if(i == 0) {
-                        result = numbers[i]
-                    } else {
-                        result *= numbers[i]
-                    }
-                }
-                break
-
-            case "/":
-                for(let i = 0; i < numbers.length; i++) {
-                    if(i == 0) {
-                        result = numbers[i]
-                    } else {
-                        result /= numbers[i]
-                    }
-                }
-                break
-
-            case "√x":
-                for(let i = 0; i < numbers.length; i++) {
-                    if(i == 0) {
-                        result = numbers[i]
-                    } else {
-                        
-                    }
-                }
-                result = Math.sqrt(result)
-                break
-
-            case "x2":
-                for(let i = 0; i < numbers.length; i++) {
-                    if(i == 0) {
-                        result = numbers[i]
-                    } else {
-
-                    }
-                }
-                result = Math.pow(result, 2)
-                break
-
-            default : 
-                result = numbers[0]
-                break;
+            switch(operator) {
+                case "+":
+                    result += parseFloat(numbers[i])
+                    break                
+    
+                case "-":                
+                    i == 0 ? result = numbers[i] : result -= numbers[i]                
+                    break
+    
+                case "*":
+                    i == 0 ? result = numbers[i] : result *= numbers[i]
+                    break
+    
+                case "/":
+                    i == 0 ? result = numbers[i] : result /= numbers[i]
+                    break
+    
+                case "√x":
+                    result = Math.sqrt(numbers[0])
+                    break
+    
+                case "x2":
+                    result = Math.pow(numbers[0], 2)
+                    break
+    
+                default : 
+                    result = numbers[0]
+                    break;
+            }
         }
 
-        output.innerText = result
         string += `${number} = ${result}`
         operator = ""
         number = ""
@@ -159,7 +128,6 @@ function registerEventListeners() {
         number = deleteLastCharacter(number)
         output.innerHTML = `<p>${number}</p><small>${string}</small>`
     })
-
 }
 
 // CLEAR EVERYTHING FUNCTION
