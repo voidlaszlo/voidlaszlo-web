@@ -3,6 +3,8 @@
     box-sizing: border-box;
 }
 
+$breakpoint-mobile : 500px;
+
 div.container {
     width: 50%;
     margin: 0 auto;
@@ -16,9 +18,9 @@ div.container {
     "n nr"
     "nb nr";
 
-    @media screen and(max-width: 550px) {
-        margin-top: 1em;
-        width: 90%;
+    @media screen and(max-width: $breakpoint-mobile) {
+        margin-top: 30%;
+        width: 95%;
     }
 
     div#output {
@@ -62,5 +64,10 @@ div.container {
     button {
         padding: 1em;
         width: 100%;
+        border-radius: 0px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 1.5em;
+        }
     }
 }

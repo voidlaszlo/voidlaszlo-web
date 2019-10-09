@@ -16,10 +16,10 @@ div.container {
       grid-template-areas: "op op" "n nr" "nb nr";
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
   div.container {
-    margin-top: 1em;
-    width: 90%;
+    margin-top: 30%;
+    width: 95%;
   }
 }
 
@@ -85,5 +85,12 @@ div.container div#numbers-bottom {
 div.container button {
   padding: 1em;
   width: 100%;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  div.container button {
+    font-size: 1.5em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

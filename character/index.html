@@ -4,48 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/main.css?v001">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="./assets/css/main.css?v01">
 </head>
 <body>
 
-<div class="container">
-    <div id="output">
-        <p id="resultOutput"></p>
-        <small id="prevOperations"></small>
-    </div> 
+    <header>
 
-    <div id="numbers">
-        <button class="number">7</button>
-        <button class="number">8</button>
-        <button class="number">9</button>
+        <h1>character manager</h1>
 
-        <button class="number">4</button>
-        <button class="number">5</button>
-        <button class="number">6</button>
+    </header>
 
-        <button class="number">1</button>
-        <button class="number">2</button>
-        <button class="number">3</button>
-    </div>
+    <main>
 
-    <div id="numbers-bottom">
-        <button id="cBtn">C</button>
-        <button class="number">0</button>
-        <button id="comma">.</button>
-    </div>
+        <h1>The Manager</h1>
 
-    <div id="numbers-right">
-        <button id="deleteBtn">&larr;</button>
-        <button class="operator">+</button>
-        <button class="operator">-</button>
-        <button id="equals">=</button>
-    </div>
+        <div class="manage">
     
+            <div class="manage-left">
     
-</div>
+                <label for="character_name">Character's name:</label><br>
+                <input type="text" placeholder="character's name" name="character_name" id="character_name" maxlength="16"><br>
     
+                <label for="chararacter_description">Description:</label><br>
+                <input type="text" placeholder="description" name="character_description" id="character_description" maxlength="125"><br>
     
-<script src="./assets/js/app.js"></script>
+                <label for="ability_name">Ability Name:</label><br>
+                <input type="text" placeholder="ability name" name="ability_name" id="ability_name"  maxlength="16"><br>
+    
+                <label for="ability_description">Ability Description:</label><br>
+                <input type="text" placeholder="ability description" name="ability_description" id="ability_description" maxlength="50"><br>
+    
+            </div>
+    
+            <div class="manage-right">
+                <button id="add_character_btn">ADD CHARACTER</button>
+            </div>
+    
+        </div>
+
+        <div class="character-title">
+            <h1>The Characters</h1><input type="text" placeholder="search character.." id="search_input">
+        </div>
+
+        <div id="display">
+
+            <div class="character">
+
+                <h2>Character Name</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur cumque ab obcaecati saepe dicta quae eius libero tempore dignissimos explicabo asperiores reiciendis.</p>
+                    
+                <div class="character-abilites">
+                    <h2>Abilities : </h2>
+                    <p title="first_desc">Ability</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>made by <span>&#10084;</span> voidlaszlo | <a href="https://github.com/voidlaszlo">github</a></p>
+    </footer>
+    
+<script src="./app/app.js"></script>
 </body>
 </html>
