@@ -1,0 +1,81 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+$breakpoint-mobile : 500px;
+
+div.container {
+    width: 80%;
+    max-width: 700px;
+    margin: 30vh auto;
+    background-color: #eee;
+    
+    // GRID
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "op op"
+    "nt nt"
+    "n nr"
+    "nb nr";
+
+    @media screen and(max-width: $breakpoint-mobile) {
+        margin-top: 30%;
+        width: 95%;
+    }
+
+    div#output {
+        position: relative;
+        grid-area : op;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+
+        p {
+            color: white;
+            margin-left: 1em;
+            font-size: 2em;
+            
+        }
+
+        small {
+            position: absolute;
+            top: 5px;
+            right: 5px;;
+            color: #eee;
+        }
+    }
+
+    div#numbers {
+        grid-area: n;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div#numbers-right {
+        grid-area: nr;
+    }
+
+    div#numbers-bottom {
+        grid-area: nb;
+        display: flex;
+        flex-direction: row;
+    }
+
+    div#numbers-top {
+        grid-area: nt;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr)
+    }
+    button {
+        padding: 1em;
+        width: 100%;
+        border-radius: 0px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 1.5em;
+        }
+    }
+}

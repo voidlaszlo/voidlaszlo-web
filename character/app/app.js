@@ -16,7 +16,10 @@ class CharacterContainer {
     }
 
     search(search_input_value) {
-        let searched_characters = this.characters.filter( character => character.name.toLowerCase().includes(search_input_value.toLowerCase()))
+        let searched_characters = []
+        for( let character of this.characters ) {
+            character.name.toLowerCase().startsWith(search_input_value.toLowerCase()) ? searched_characters.push(character) : null
+        }
         return searched_characters
     }
 }
