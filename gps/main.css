@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+nav {
+  padding: 1em;
+  background-color: #eee;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+div#output {
+  margin: 2em auto;
+  margin-bottom: 0;
+  width: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+div#output div.box {
+  border: 1px solid black;
+  text-align: center;
+}
+
+p {
+  margin-top: 1em;
+  padding: 0 1em;
+}
+/*# sourceMappingURL=main.css.map */
