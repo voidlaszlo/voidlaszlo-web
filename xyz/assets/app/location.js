@@ -76,11 +76,14 @@ var EventX = /** @class */ (function (_super) {
 var PlaceContainer = /** @class */ (function () {
     function PlaceContainer() {
         this.places = [
-            new Place(),
-            new Place(),
-            new Restaurant(),
-            new EventX()
+            new Place("Place 1", 1100, "Code Straße 43 / 1007"),
+            new Place("Place 2", 6650, "Angular Straße 77 / 7"),
+            new Restaurant("Restaurant 1", 2750, "Carbonara Straße 12 / 26"),
+            new EventX("Event 1", 7341, "Donau Insel")
         ];
     }
+    PlaceContainer.prototype.addPlace = function (place) {
+        this.places.push(place);
+    };
     return PlaceContainer;
 }());

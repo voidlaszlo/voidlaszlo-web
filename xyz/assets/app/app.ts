@@ -16,4 +16,4 @@ class App {
     }
 }
 
-const app = new App()
+const app:App = new App()
