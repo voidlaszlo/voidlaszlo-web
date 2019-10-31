@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+}
+
+header h1 {
+  background-color: #eee;
+  padding: 1em;
+  text-align: center;
+}
+
+footer p {
+  padding: 1em;
+  background-color: #eee;
+  text-align: center;
+}
+
+footer p span {
+  color: black;
+}
+
+footer p a, footer p a:link, footer p a:visited {
+  color: black;
+}
+
+div#posts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+
+div#posts div.post span.symbol {
+  color: grey;
+}
+
+div#posts div.post h4 {
+  background-color: #eee;
+  padding: 1em 2em;
+  text-transform: lowercase;
+}
+
+div#posts div.post div.post-image {
+  position: relative;
+}
+
+div#posts div.post div.post-image img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div#posts div.post div.post-image .heart {
+  font-size: 10em;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  -webkit-animation: hideHeart 2s ease-out;
+          animation: hideHeart 2s ease-out;
+}
+
+div#posts div.post div.post-body {
+  position: relative;
+  background-color: #eee;
+  padding: 2em;
+}
+
+div#posts div.post div.post-body small {
+  position: absolute;
+  top: 5px;
+}
+
+@-webkit-keyframes hideHeart {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes hideHeart {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
