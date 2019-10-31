@@ -50,6 +50,12 @@ div#location div.place img {
   height: 200px;
 }
 
+@media screen and (max-width: 600px) {
+  div#location div.place img {
+    display: none;
+  }
+}
+
 div#location div.place div.place-body {
   display: -webkit-box;
   display: -ms-flexbox;
