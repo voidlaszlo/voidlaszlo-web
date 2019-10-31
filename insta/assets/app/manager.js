@@ -17,10 +17,6 @@ class InputManager {
         for(let img of imgs) {
             img.addEventListener('click', e => {
                 let [ index ] = img.parentNode.parentNode.attributes
-                let heart = document.createElement("p")
-                heart.innerHTML = "&hearts;"
-                heart.classList.add("heart")
-                img.parentNode.append(heart)
                 app.manager.postContainer.posts[index.value].likeCount++
                 app.manager.output.innerHTML = app.manager.render()
                 this.registerEventListeners()

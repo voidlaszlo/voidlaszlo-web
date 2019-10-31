@@ -41,8 +41,8 @@ div#posts {
   grid-gap: 1em;
 }
 
-div#posts div.post span.symbol {
-  color: grey;
+div#posts div.post span.symbol:nth-child(1) {
+  color: red;
 }
 
 div#posts div.post h4 {
@@ -57,7 +57,7 @@ div#posts div.post div.post-image {
 
 div#posts div.post div.post-image img {
   width: 100%;
-  height: 250px;
+  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
 }
