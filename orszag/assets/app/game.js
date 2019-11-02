@@ -3,7 +3,7 @@ class Game {
 
         // BASE
         this.timeLeft = 60
-        this.currentCharacter = "Click"
+        this.currentCharacter = "Klikk"
         this.correct = 0
         this.wrong = 0
 
