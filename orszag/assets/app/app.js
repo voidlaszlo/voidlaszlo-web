@@ -5,6 +5,7 @@ class App {
         this.alphabet = "J, K, I, L, H, M, G, O, A, D, B, E, C, P, T, S, R, F, U, Z, N, V"
         this.usedCharacterCount = 0
         this.inputs = document.querySelectorAll('input')
+        this.questionMarks = document.querySelectorAll('.question-mark')
         this.format()
         this.registerEventListeners()
         this.addDisabledInput()
@@ -49,6 +50,8 @@ class App {
             item.nextElementSibling.textContent = "✔"
             item.nextElementSibling.style.color = "greenyellow"
             item.style.color = "greenyellow"
+            item.nextElementSibling.nextElementSibling.style.display = "none"
+            item.nextElementSibling.nextElementSibling.setAttribute("href", "#")
         })
     }
 
@@ -68,12 +71,16 @@ class App {
                 item.nextElementSibling.style.color = "red"
                 item.style.borderColor = "darkred"
                 item.style.color = "red"
+                item.nextElementSibling.nextElementSibling.style.display = "block"
+                item.nextElementSibling.nextElementSibling.setAttribute("href", `https://google.com/search?q=${item.value}`)
                 
                 } else {
                     item.nextElementSibling.textContent = "✔"
                     item.nextElementSibling.style.color = "greenyellow"
                     item.style.borderColor = "darkgreen"
-                    item.style.color = "greenyellow"  
+                    item.style.color = "greenyellow"
+                    item.nextElementSibling.nextElementSibling.style.display = "block"
+                    item.nextElementSibling.nextElementSibling.setAttribute("href", `https://google.com/search?q=${item.value}`)  
                 }
             }
         })

@@ -14,6 +14,13 @@ body {
     position: relative;
     max-width: 768px;
     margin: 0 auto;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
 
 body::before {
@@ -92,6 +99,7 @@ div.container {
     div.input {
         display: flex;
         flex-direction: column;
+        position: relative;
 
         label {
             margin-bottom: 0.1em;
@@ -120,6 +128,19 @@ div.container {
             display: block;
         }
 
+        a.question-mark {
+            display: none;
+            text-decoration: none;
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+            color: orange;
+            top: 46%;
+            font-size: 1.25em;
+            z-index: 2;
+            outline: none;
+        }
+
     }
 
     button {
@@ -130,4 +151,25 @@ div.container {
         padding: 1em;
     }
             
+}
+
+footer {
+    margin-top: 3em;
+    font-size: 0.5em;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span#tm {
+        color: greenyellow;
+    }
+
+    span#xm {
+        color: red;
+    }
+
+    span#qm {
+        color: orange;
+    }
 }

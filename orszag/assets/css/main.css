@@ -15,6 +15,18 @@ body {
   position: relative;
   max-width: 768px;
   margin: 0 auto;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
 
 body::before {
@@ -113,6 +125,7 @@ div.container div.input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 div.container div.input label {
@@ -143,11 +156,52 @@ div.container div.input input:not(:placeholder-shown) + small {
   display: block;
 }
 
+div.container div.input a.question-mark {
+  display: none;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  color: orange;
+  top: 46%;
+  font-size: 1.25em;
+  z-index: 2;
+  outline: none;
+}
+
 div.container button {
   border: 2px solid black;
   background-color: transparent;
   color: #eee;
   font-size: 1.8em;
   padding: 1em;
+}
+
+footer {
+  margin-top: 3em;
+  font-size: 0.5em;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer span#tm {
+  color: greenyellow;
+}
+
+footer span#xm {
+  color: red;
+}
+
+footer span#qm {
+  color: orange;
 }
 /*# sourceMappingURL=main.css.map */
