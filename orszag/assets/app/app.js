@@ -1,12 +1,14 @@
 class App {
     constructor() {
         this.game = new Game()
-        this.alphabet = "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z"
+        //this.alphabet = "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z"
+        this.alphabet = "J, K, I, L, H, M, G, O, A, D, B, E, C, P, T, S, R, F, U, Z, N, V"
         this.usedCharacterCount = 0
         this.inputs = document.querySelectorAll('input')
         this.format()
         this.registerEventListeners()
         this.addDisabledInput()
+        this.changeCorrect()
     }
     
     format() {
@@ -18,7 +20,7 @@ class App {
             
             let endScreen = document.getElementById('end-screen')
             endScreen.style.display = "flex"
-            endScreen.innerHTML = `<p>Vége</p><p><span>10</span> pont</p>`
+            endScreen.innerHTML = `<p>Vége</p>`
 
             // REMOVE EVENT LISTENER
             this.game.currentCharacterPlace.removeEventListener('click', e => {
@@ -31,8 +33,8 @@ class App {
         } else {
 
             let random = Math.floor(Math.random() * this.alphabet.length)
-            this.game.character = this.alphabet[random]
-            this.alphabet.splice(this.alphabet.indexOf(this.alphabet[random]), 1)
+            this.game.character = this.alphabet[0]
+            this.alphabet.splice(this.alphabet.indexOf(this.alphabet[0]), 1)
             this.usedCharacterCount++
             this.game.timeLeft = 60
 
@@ -41,6 +43,7 @@ class App {
 
     removeDisabledInput() {
         this.inputs.forEach(item => {
+            item.removeAttribute("style")
             item.disabled = false   
             item.value = ""
             item.nextElementSibling.textContent = "✔"
@@ -76,18 +79,70 @@ class App {
         })
     }
 
+    checkAnswers() {
+        this.inputs.forEach(item => {
+            switch(item.nextElementSibling.textContent) {
+
+                case "✔" :
+                    this.game.correct++
+                    break
+
+                case "✖" :
+                    this.game.wrong++
+                    break
+            }
+        })
+    }
+
+    // CHANGE CORRECT
+    changeCorrect() {
+            this.inputs.forEach(item => {
+                item.previousElementSibling.addEventListener('click', e => {
+                    if(document.getElementById('timeLeft').textContent === "Vége") {
+
+                        if(item.value === " ") {
+
+                        } else {
+                            
+                            item.nextElementSibling.textContent = item.nextElementSibling.textContent === "✔" ? "✖" : "✔"
+                            switch(item.nextElementSibling.textContent) {
+                                case "✔":
+                                    item.nextElementSibling.style.color = "greenyellow"
+                                    item.style.borderColor = "darkgreen"
+                                    item.style.color = "greenyellow"  
+                                    break
+        
+                                case "✖":
+                                    item.nextElementSibling.style.color = "red"
+                                    item.style.borderColor = "darkred"
+                                    item.style.color = "red"
+                                    break 
+                            }
+                        }
+
+                    } else {
+
+                    }
+                })
+            })
+        
+    }
+
     registerEventListeners() {
         // CHARACTER PLACE
         this.game.currentCharacterPlace.addEventListener('click', e => {
             if(this.game.timeLeftPlace.textContent === "60s" || this.game.timeLeftPlace.textContent === "Vége") {
+                app.usedCharacterCount === 0 ? null : this.checkAnswers()
                 this.randomize()
                 this.game.countDown()
                 this.removeDisabledInput()
+                
             } else {
                 
             }
         })
     }
+
 }
 
 const app = new App()

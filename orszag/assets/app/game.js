@@ -4,6 +4,8 @@ class Game {
         // BASE
         this.timeLeft = 60
         this.currentCharacter = "Click"
+        this.correct = 0
+        this.wrong = 0
 
         // SELECTORS
         this.timeLeftPlace = document.getElementById('timeLeft')
@@ -24,6 +26,31 @@ class Game {
     countDown() {       
         this.timeLeftPlace.innerHTML = `${this.timeLeft}<span>s</span>`
         this.timeLeftPlace.removeAttribute("style")
+
+        if(app.usedCharacterCount === 11 || app.usedCharacterCount === 21) {
+            let endScreen = document.getElementById('end-screen')
+            endScreen.style.display = "flex"
+            endScreen.innerHTML = `<p>Vége</p><p><span>${this.correct}</span> pont</p>`
+            endScreen.addEventListener('click', e => {
+                endScreen.style.display = "none"
+                this.correct = 0
+                this.wrong = 0
+            })
+
+            // REMOVE EVENT LISTENER
+            this.currentCharacterPlace.removeEventListener('click', e => {
+                if(this.game.timeLeftPlace.textContent === "60s" || this.game.timeLeftPlace.textContent === "Vége") {
+                    this.randomize()
+                    this.game.countDown()
+                    this.removeDisabledInput()
+                } else {
+                    
+                }
+            })
+
+            return
+        }
+
         let interval = window.setInterval(e => {
             if(this.timeLeft > 0) {
                 this.timeLeft--
@@ -41,7 +68,7 @@ class Game {
                 window.clearInterval(interval)
                 return
             }
-        }, 100)
+        }, 1000)
         
     }
 }
