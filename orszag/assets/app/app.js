@@ -76,13 +76,31 @@ class App {
                 item.nextElementSibling.nextElementSibling.style.display = "block"
                 item.nextElementSibling.nextElementSibling.setAttribute("href", `https://google.com/search?q=${item.value}`)
                 
+                if(item.attributes["minlength"]) {
+                    if(item.value.length < item.attributes["minlength"].value) {
+                        item.nextElementSibling.textContent = "✖"
+                        item.nextElementSibling.style.color = "red"
+                        item.style.borderColor = "darkred"
+                        item.style.color = "red"
+                    }
+                }
+                
                 } else {
                     item.nextElementSibling.textContent = "✔"
                     item.nextElementSibling.style.color = "greenyellow"
                     item.style.borderColor = "darkgreen"
                     item.style.color = "greenyellow"
                     item.nextElementSibling.nextElementSibling.style.display = "block"
-                    item.nextElementSibling.nextElementSibling.setAttribute("href", `https://google.com/search?q=${item.value}`)  
+                    item.nextElementSibling.nextElementSibling.setAttribute("href", `https://google.com/search?q=${item.value}`)
+                    
+                    if(item.attributes["minlength"]) {
+                        if(item.value.length < parseInt(item.attributes["minlength"].value)) {
+                            item.nextElementSibling.textContent = "✖"
+                            item.nextElementSibling.style.color = "red"
+                            item.style.borderColor = "darkred"
+                            item.style.color = "red"
+                        }
+                    }  
                 }
             }
         })

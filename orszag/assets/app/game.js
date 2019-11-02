@@ -68,7 +68,7 @@ class Game {
                 window.clearInterval(interval)
                 return
             }
-        }, 10)
+        }, 1000)
         
     }
 }
