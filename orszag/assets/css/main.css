@@ -204,4 +204,22 @@ footer span#xm {
 footer span#qm {
   color: orange;
 }
+
+footer span#ands {
+  color: #eee;
+}
+
+footer a:nth-child(1) {
+  font-weight: 400;
+}
+
+footer a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer p:nth-of-type(2) {
+  margin-top: 2em;
+}
 /*# sourceMappingURL=main.css.map */
