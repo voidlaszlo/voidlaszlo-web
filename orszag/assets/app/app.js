@@ -14,6 +14,8 @@ class App {
     
     format() {
         this.alphabet = this.alphabet.split(", ")
+        this.alphabet.splice(10, 0, "Klikk")
+        this.alphabet.splice(20, 0, "Klikk")
     }
 
     randomize() {

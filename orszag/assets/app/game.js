@@ -19,7 +19,7 @@ class Game {
 
     // SETTERS
     set character(character) {
-        this.currentCharacter = character.toUpperCase()
+        this.currentCharacter = character
         this.currentCharacterPlace.innerHTML = this.currentCharacter
     }
 
@@ -68,7 +68,7 @@ class Game {
                 window.clearInterval(interval)
                 return
             }
-        }, 1000)
+        }, 10)
         
     }
 }
