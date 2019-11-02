@@ -78,6 +78,10 @@ header p span {
   color: #eee;
 }
 
+header p#currentCharacter {
+  color: #eee;
+}
+
 header button {
   border: 1px solid black;
   background-color: #262626;
@@ -139,9 +143,9 @@ div.container div.input input:not(:placeholder-shown) + small {
 
 div.container button {
   border: 2px solid black;
-  background-color: #0d0d0d;
-  color: greenyellow;
+  background-color: transparent;
+  color: #eee;
   font-size: 1.8em;
-  padding: 0.1em;
+  padding: 1em;
 }
 /*# sourceMappingURL=main.css.map */

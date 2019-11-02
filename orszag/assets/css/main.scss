@@ -66,6 +66,10 @@ header {
         }
     }
 
+    p#currentCharacter {
+        color: #eee;
+    }
+
     button {
         border: 1px solid black;
         background-color: darken(#333, 5);
@@ -118,10 +122,10 @@ div.container {
 
     button {
         border: 2px solid black;
-        background-color: darken(#333, 15);
-        color: greenyellow;
+        background-color: transparent;
+        color: #eee;
         font-size: 1.8em;
-        padding: 0.1em;
+        padding: 1em;
     }
             
 }

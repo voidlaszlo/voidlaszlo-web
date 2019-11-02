@@ -40,24 +40,38 @@ class App {
     }
 
     removeDisabledInput() {
-        this.inputs.forEach(item => {            
-            item.disabled = false
+        this.inputs.forEach(item => {
+            item.disabled = false   
             item.value = ""
             item.nextElementSibling.textContent = "✔"
             item.nextElementSibling.style.color = "greenyellow"
+            item.style.color = "greenyellow"
         })
     }
 
     addDisabledInput() {
         this.inputs.forEach(item => {
             item.disabled = true
-            if(item.value === "") {
+            if(this.game.timeLeftPlace.textContent === "Vége") {                
+                if(item.value === "") {
                 item.value = " "
                 item.nextElementSibling.textContent = "✖"
                 item.nextElementSibling.style.color = "red"
-            } else if(!item.value.toUpperCase().startsWith(this.game.currentCharacter.toUpperCase())) {
+                item.style.borderColor = "darkred"
+                item.style.color = "red"
+
+                } else if(!item.value.toUpperCase().startsWith(this.game.currentCharacter.toUpperCase())) {
                 item.nextElementSibling.textContent = "✖"
                 item.nextElementSibling.style.color = "red"
+                item.style.borderColor = "darkred"
+                item.style.color = "red"
+                
+                } else {
+                    item.nextElementSibling.textContent = "✔"
+                    item.nextElementSibling.style.color = "greenyellow"
+                    item.style.borderColor = "darkgreen"
+                    item.style.color = "greenyellow"  
+                }
             }
         })
     }
