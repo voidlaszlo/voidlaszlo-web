@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ország Város &hearts;</title>
-    <link rel="stylesheet" href="./assets/css/main.css?v0001">
+    <link rel="stylesheet" href="./assets/css/main.css?v0002">
+    <script defer src="./assets/app/game.js"></script>
+    <script defer src="./assets/app/app.js"></script>
 </head>
 <body>
 
     <header>
-        <p>60s</p>
-        <p>B</p>
+        <p id="timeLeft">60s</p>
+        <p id="currentCharacter">B</p>
     </header>
     
     <div class="container">
@@ -19,37 +21,37 @@
         <div class="input">
             <label for="orszag">Ország</label>
             <input type="text" name="orszag" placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
         
         <div class="input">
             <label for="orszag">Város</label>
-            <input type="text" name="orszag" disabled placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <input type="text" name="orszag" placeholder=" ">
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
         
         <div class="input">
             <label for="orszag">Fiú</label>
-            <input type="text" name="orszag" disabled placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <input type="text" name="orszag" placeholder=" ">
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
         
         <div class="input">
             <label for="orszag">Lány</label>
-            <input type="text" name="orszag" disabled placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <input type="text" name="orszag" placeholder=" ">
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
         
         <div class="input">
             <label for="orszag">Állat</label>
-            <input type="text" name="orszag" disabled placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <input type="text" name="orszag" placeholder=" ">
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
         
         <div class="input">
             <label for="orszag">Meseszereplő</label>
-            <input type="text" name="orszag" disabled placeholder=" ">
-            <small style="color: greenyellow;">&#10004;</small>
+            <input type="text" name="orszag" placeholder=" ">
+            <small id="check" style="color: greenyellow;">✔</small>
         </div>
 
         <button>Kész vagyok!</button>

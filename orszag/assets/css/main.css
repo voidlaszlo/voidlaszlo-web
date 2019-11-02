@@ -74,6 +74,10 @@ header p {
   width: 100%;
 }
 
+header p span {
+  color: #eee;
+}
+
 header button {
   border: 1px solid black;
   background-color: #262626;
