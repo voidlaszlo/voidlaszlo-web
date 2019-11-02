@@ -148,7 +148,7 @@ div.container div.input input {
 div.container div.input small {
   display: none;
   position: absolute;
-  right: 10%;
+  right: 0;
   color: greenyellow;
 }
 

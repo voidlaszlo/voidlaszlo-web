@@ -1,8 +1,9 @@
 class Game {
-    constructor() {
+    constructor(timeInMs) {
 
         // BASE
         this.timeLeft = 60
+        this.timeInMs = timeInMs
         this.currentCharacter = "Klikk"
         this.correct = 0
         this.wrong = 0
@@ -68,7 +69,7 @@ class Game {
                 window.clearInterval(interval)
                 return
             }
-        }, 1000)
+        }, this.timeInMs)
         
     }
 }

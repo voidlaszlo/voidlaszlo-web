@@ -1,6 +1,6 @@
 class App {
     constructor() {
-        this.game = new Game()
+        this.game = new Game(1000)
         //this.alphabet = "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z"
         this.alphabet = "J, K, I, L, H, M, G, O, A, D, B, E, C, P, T, S, R, F, U, Z, N, V"
         this.usedCharacterCount = 0
