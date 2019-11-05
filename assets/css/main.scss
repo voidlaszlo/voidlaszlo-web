@@ -10,6 +10,10 @@ $color-text : #707070;
 $color-background : #fff;
 
 body {
+    // DELETE IF DESKTOP IS READY
+    max-width: 400px;
+    margin: 0 auto;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 3em;
