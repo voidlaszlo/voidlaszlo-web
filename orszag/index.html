@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ország Város &hearts;</title>
+    <link rel="stylesheet" href="./assets/css/main.css?v0003">
+    <script defer src="./assets/app/game.js"></script>
+    <script defer src="./assets/app/app.js"></script>
+</head>
+<body>
+
+    <header>
+        <p id="timeLeft" title="time left">60s</p>
+        <p id="currentCharacter">B</p>
+    </header>
+    
+    <div class="container">
+
+        <div class="input">
+            <label for="country">Ország</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off" type="text" name="country" placeholder=" " minlength="4">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+        
+        <div class="input">
+            <label for="city">Város</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="city" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+        
+        <div class="input">
+            <label for="male_name">Fiú</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="male_name" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+        
+        <div class="input">
+            <label for="female_name">Lány</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="female_name" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+        
+        <div class="input">
+            <label for="animal">Állat</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="animal" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+
+        <div class="input">
+            <label for="plant">Növény</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="plant" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+        
+        <div class="input">
+            <label for="fairy_character">Meseszereplő</label>
+            <input autocomplete="off" autocorrect="off" spellcheck="off"  type="text" name="fairy_character" placeholder=" " minlength="2">
+            <small id="check" style="color: greenyellow;">✔</small>
+            <a class="question-mark" target="_blank" href="#" title="vajon helyes?">?</a>
+        </div>
+
+    </div>
+
+    <div id="end-screen">
+        <small>Elért pontjaid:</small>
+        <p><span>10</span> pont</p>
+    </div>
+
+    <footer>
+        <p>Hogyan?</p>
+        <ul>
+            <li>Klikkelj a betűre, hogy megkezd az új kört.</li>
+            <li>Klikkelj a cimkére, hogy megváltoztasd a <span id="tm">✔</span> / <span id="xm">✖</span> -et.</li>
+            <li>Klikkelj a <span id="qm">?</span> -re, ha nem vagy biztos a válaszodban.</li>
+        </ul>        
+        <p><a href="https://voidlaszlo.com">voidlaszlo.com&trade;</a> <span>|</span> <a href="https://www.github.com/voidlaszlo">voidlaszlo</a> <span>&</span> <a href="https://www.github.com/imperasus">imperasus</a></p>
+    </footer>
+    
+</body>
+</html>

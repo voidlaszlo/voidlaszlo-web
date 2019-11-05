@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.container {
+  width: 80%;
+  max-width: 700px;
+  margin: 30vh auto;
+  background-color: #eee;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "op op" "nt nt" "n nr" "nb nr";
+}
+
+@media screen and (max-width: 500px) {
+  div.container {
+    margin-top: 30%;
+    width: 95%;
+  }
+}
+
+div.container div#output {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: op;
+  height: 100px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.container div#output p {
+  color: white;
+  margin-left: 1em;
+  font-size: 2em;
+}
+
+div.container div#output small {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #eee;
+}
+
+div.container div#numbers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: n;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+div.container div#numbers-right {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: nr;
+}
+
+div.container div#numbers-bottom {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: nb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+div.container div#numbers-top {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nt;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+div.container button {
+  padding: 1em;
+  width: 100%;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  div.container button {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
