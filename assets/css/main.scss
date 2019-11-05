@@ -62,6 +62,11 @@ main {
 
             h2 {
                 margin-bottom: 2em;
+
+                span {
+                    color: lighten($color-text, 20);
+                    font-size: 0.9em;
+                }
             }
 
             a {
