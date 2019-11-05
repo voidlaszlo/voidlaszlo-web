@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+$color-text : #707070;
+$color-background : #fff;
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3em;
+
+    padding: 0.75em;
+
+    background-color: $color-background;
+    color: $color-text;
+    
+}
+
+header {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        margin-top: -0.75em;
+        color: lighten($color-text, 10);
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3em;
+
+    section#about {
+
+        p {
+            border-left: 1px solid darken($color-text, 5);
+            padding-left: 1em;
+        }
+
+    }
+
+    section#projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3em;
+
+        text-align: left;
+
+        div.project {
+
+            h2 {
+                margin-bottom: 2em;
+            }
+
+            a {
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-left: 1px solid grey;
+                }
+            }
+        }
+    }
+
+    section#skills {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        div.images {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1em;
+            padding: 1em;
+            border: 1px solid darken($color-text, 5);
+            border-top: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            img {
+                width: 100%;
+                justify-self: center;
+                align-self: center;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+
+    p {
+
+        a:first-child {
+            text-decoration: none;
+        }
+
+        a, a:link, a:visited {
+            color: $color-text;
+        }
+
+    }
+
+    
+}

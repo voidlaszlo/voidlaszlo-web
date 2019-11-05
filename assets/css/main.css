@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 3em;
+  padding: 0.75em;
+  background-color: #fff;
+  color: #707070;
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+header h3 {
+  margin-top: -0.75em;
+  color: #8a8a8a;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 3em;
+}
+
+main section#about p {
+  border-left: 1px solid #636363;
+  padding-left: 1em;
+}
+
+main section#projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 3em;
+  text-align: left;
+}
+
+main section#projects div.project h2 {
+  margin-bottom: 2em;
+}
+
+main section#projects div.project a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-left: 1px solid grey;
+}
+
+main section#skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+main section#skills div.images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  border: 1px solid #636363;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+main section#skills div.images img {
+  width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+}
+
+footer p a:first-child {
+  text-decoration: none;
+}
+
+footer p a, footer p a:link, footer p a:visited {
+  color: #707070;
+}
+/*# sourceMappingURL=main.css.map */
