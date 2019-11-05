@@ -8,7 +8,7 @@
 }
 
 body {
-  max-width: 400px;
+  max-width: 1280px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -42,6 +42,12 @@ main section#about p {
   padding-left: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  main section#about p {
+    font-size: 1.3em;
+  }
+}
+
 main section#projects {
   display: -ms-grid;
   display: grid;
@@ -49,6 +55,22 @@ main section#projects {
       grid-template-columns: 1fr;
   grid-gap: 3em;
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  main section#projects {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 3em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main section#projects {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 main section#projects div.project h2 {
@@ -67,11 +89,25 @@ main section#projects div.project a img {
   border-left: 1px solid grey;
 }
 
+@media screen and (min-width: 768px) {
+  main section#projects div.project a img {
+    border: none;
+  }
+}
+
 main section#skills {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1280px) {
+  main section#skills {
+    text-align: center;
+    border-top: 1px solid grey;
+    padding: 1em;
+  }
 }
 
 main section#skills div.images {
@@ -85,6 +121,14 @@ main section#skills div.images {
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 1280px) {
+  main section#skills div.images {
+    width: 50%;
+    border: none;
+    margin: 2em auto;
+  }
 }
 
 main section#skills div.images img {
