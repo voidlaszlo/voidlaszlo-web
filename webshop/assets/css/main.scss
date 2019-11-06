@@ -19,6 +19,8 @@ $color-background : #444444;
 
 // LOGIN PAGE
 div#login-container {
+    animation: showLogin 1s ease-in-out;
+
     height: 100vh;
     color: white;
     background-color: $color-purple;
@@ -59,6 +61,8 @@ div#login-container {
             border-radius: 15px;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.24);
             background-color: $color-background;
+
+            animation: slideIn 1s;
         }
 
         button {
@@ -83,5 +87,25 @@ div#login-container {
             color: white;
             text-decoration: none;
         }
+    }
+}
+
+@keyframes showLogin {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(+3%);
     }
 }
