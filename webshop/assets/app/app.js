@@ -9,9 +9,15 @@ class App {
         document.body.innerHTML = 
         `
         <div id="login-container">
-            <p>hey there, login please</p>
-            <input id="username" type="text" placeholder="username">
-            <button>Login</button>
+            <div class="login-text">
+                <h1>Hi there!</h1>
+                <p>This is a front-end only web shop.</p>
+            </div>
+            <div class="login-input">
+                <input id="username" type="text" placeholder="username">
+                <button>Login</button>
+            </div>
+            <p><a href="https://voidlaszlo.com">www.voidlaszlo.com</a></p>
         </div>
         `
 

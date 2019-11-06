@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900&display=swap');
+
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
@@ -5,5 +7,81 @@
 
 body {
     max-width: 400px;
-    margin:  1em auto;
+    margin:  0 auto;
+    font-family: 'Titillium Web', sans-serif;
+    height: 100%;
+}
+
+$color-purple : #965BFE;
+$color-blue : #6EC0FF;
+$color-grey : #979797;
+$color-background : #444444;
+
+// LOGIN PAGE
+div#login-container {
+    height: 100vh;
+    color: white;
+    background-color: $color-purple;
+    background: linear-gradient(to bottom, $color-purple, $color-blue);
+    text-align: center;
+
+    padding: 2em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+    div.login-text {
+        align-self: flex-end;
+
+        h1 {
+            font-size: 35px;
+            font-weight: 700;
+            margin-bottom: -5px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    div.login-input {
+        position: relative;
+        
+        input {
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            height: 60px;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.24);
+            background-color: $color-background;
+        }
+
+        button {
+            margin-top: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: 1em;
+            background: none;
+            border: none;
+            font-weight: 700;
+            color: white;
+            font-size: 20px;
+        }
+
+    }
+    
+    p {
+        align-self: flex-end;
+        margin-bottom: 2em;
+        
+        a, a:visited, a:link {
+            color: white;
+            text-decoration: none;
+        }
+    }
 }

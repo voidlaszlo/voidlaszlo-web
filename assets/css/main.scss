@@ -15,7 +15,6 @@ $breakpoint-tablet : 768px;
 $breakpoint-desktop : 1280px;
 
 body {
-    // DELETE IF DESKTOP IS READY
     max-width: 1280px;
     margin: 0 auto;
 
@@ -27,7 +26,7 @@ body {
 
     background-color: $color-background;
     color: $color-text;
-    
+
 }
 
 header {
