@@ -121,6 +121,11 @@ header {
             border: 1px solid $color-grey;
             border-radius: 5px;
             color: $color-grey;
+
+            &:hover {
+                color: $color-blue;
+                transition: all 200ms;
+            }
         }
     }
 }

@@ -133,6 +133,12 @@ header div.header-right button {
   color: #979797;
 }
 
+header div.header-right button:hover {
+  color: #6EC0FF;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
 div#root {
   padding: 1em;
   -webkit-animation: showLogin 1s;
