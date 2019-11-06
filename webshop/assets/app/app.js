@@ -16,14 +16,14 @@ class App {
         `
 
         document.querySelector('button').addEventListener('click', e => {
-            if(document.getElementById('username').value === "admin") {
+            if(document.getElementById('username').value.toLowerCase() === "admin") {
                 this.user = new Admin()
                 this.user.render()
             } else {         
                 for(let item of this.users) {
                     let { username } = item
                     console.log(item)
-                    if(username.toLowerCase().includes(document.getElementById('username').value)) {
+                    if(username.toLowerCase().includes(document.getElementById('username').value.toLowerCase())) {
                         this.user = item
                         this.render()
                         this.user.cart.render()
