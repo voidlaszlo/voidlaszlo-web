@@ -18,8 +18,18 @@ class ShoeContainer {
     filterShoes() {
         document.getElementById("filters").innerHTML =
         `
-        <div class="input">Men<input type="checkbox" value="men"></div>
-        <div class="input">Women<input type="checkbox" value="woman"></div>
+        <div class="input"><p>Men</p><input type="checkbox" value="men"></div>
+        <div class="input"><p>Women</p><input type="checkbox" value="woman"></div>
+        `
+
+        document.getElementById("search-field").innerHTML =
+        `
+        <div class="search-top">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="search-bottom">
+            <button id="searchBtn">Search</button>
+        </div>
         `
     }
 
@@ -38,7 +48,7 @@ class ShoeContainer {
 
         if(this.checkedFilters.length === 0) {
             this.shoes.forEach(item => {
-                document.getElementById("shoes").innerHTML += `<br><div class="shoes" key="${item.id}">${item.render()}</div><br>`
+                document.getElementById("shoes").innerHTML += `<div class="shoe" key="${item.id}">${item.render()}</div>`
             })
         } else {
             let checkedFiltersString = this.checkedFilters.join(" ")
@@ -51,7 +61,7 @@ class ShoeContainer {
             })
 
             filteredShoes.forEach(item => {
-                document.getElementById("shoes").innerHTML += `<br><div class="shoes" key="${item.id}">${item.render()}</div><br>`
+                document.getElementById("shoes").innerHTML += `<div class="shoe" key="${item.id}">${item.render()}</div>`
             })
         }
         

@@ -3,19 +3,21 @@
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    max-width: 400px;
-    margin:  0 auto;
-    font-family: 'Titillium Web', sans-serif;
-    height: 100%;
+    outline: none;
 }
 
 $color-purple : #965BFE;
 $color-blue : #6EC0FF;
 $color-grey : #979797;
 $color-background : #444444;
+
+body {
+    max-width: 400px;
+    margin:  0 auto;
+    font-family: 'Titillium Web', sans-serif;
+    height: 100%;
+    background-color: $color-background;
+}
 
 // LOGIN PAGE
 div#login-container {
@@ -61,6 +63,9 @@ div#login-container {
             border-radius: 15px;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.24);
             background-color: $color-background;
+            color: white;
+
+            outline: none;
 
             animation: slideIn 1s;
         }
@@ -90,6 +95,293 @@ div#login-container {
     }
 }
 
+// SHOE PAGE
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3em;
+
+    h1 {
+        text-transform: capitalize;
+        color: $color-purple;
+        animation: slideIn 1s;
+
+        small {
+            color: white;
+            font-weight: 400;
+        }
+    }
+
+    div.header-right {
+        button {
+            padding: 0.5em;
+            background: none;
+            border: 1px solid $color-grey;
+            border-radius: 5px;
+            color: $color-grey;
+        }
+    }
+}
+
+// FAVORITES
+
+div#root {
+    padding: 1em;
+    animation: showLogin 1s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+div#favorites {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    animation: slideIn 1s;
+
+    
+
+    div.favorite-item {
+        background: url("../img/af1.png");
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        padding: 0.25em 0.5em;
+        position: relative;
+        border-radius: 10px;
+        animation: showLogin 1s;
+        p {
+
+        }
+
+        button {
+            border: 1px solid transparent;
+            padding: 0.25em 0.5em;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            font-weight: 700;
+            position: absolute;
+            bottom: 0.25em;
+            left: 0.5em;
+        }
+    }
+}
+
+// FILTERS
+div#search-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    height: 85px;
+    
+    div#filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid $color-grey;
+        padding: 1em 0.25em;
+        border-radius: 5px;
+        color: $color-grey;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+        background-color: $color-background;
+
+        div.input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+
+    div#search-field {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.25em;
+
+        div.search-top {
+            input {
+                width: 100%;
+                height: 100%;
+                border: 1px solid $color-grey;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+                background-color: $color-background;
+                border-radius: 5px;
+                padding-left: 1em;
+            }
+        }
+
+        div.search-bottom {
+            button {
+                width: 100%;
+                height: 100%;
+                border: 1px solid $color-purple;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+                background-color: $color-background;
+                border-radius: 5px;
+                font-size: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $color-purple;
+            }
+        }
+    }
+}
+
+// SHOES
+div#shoes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+    div.shoe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $color-grey;
+
+        div.shoe-left {
+            position: relative;
+
+            img {
+                width: 100%;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+            }
+
+            button {
+                position: absolute;
+                left: 0.5em;
+                top: 0.5em;
+                color: red;
+                border: 1px solid transparent;
+                padding: 0.25em 0.5em;
+                background-color: white;
+                border-radius: 50px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                font-weight: 700;
+            }
+        }
+
+        div.shoe-right {
+            justify-self: center;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            div.shoe-right-text {
+                h3 {
+                    margin-bottom: -5px;
+                }
+            }
+
+            p {
+
+            }
+
+            button {
+                width: 60%;
+                height: 35px;
+                justify-self: center;
+                background-color: $color-purple;
+                color: white;
+                border: 1px solid transparent;
+                font-size: 18px;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+
+                &:hover {
+                    background-color: $color-blue;
+                    transition: all 200ms;
+                }
+            }
+
+        }
+
+    }
+}
+
+// CART
+div#cart {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 1em;
+    left: 2.5%;
+    width: 95%;
+    background-color: $color-background;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    padding-bottom: 0.25em;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+
+    p#cart-total {
+        border: 1px solid $color-grey;
+        border-radius: 5px;
+        padding: 1em;
+        font-size: 1.6em;
+        text-align: center;
+        background-color: $color-background;
+        color: $color-purple;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+        margin-bottom: 1em;
+    }
+
+    div.cart-item {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        margin-bottom: 0.5em;
+
+        div.cart-item-text {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+
+            p {
+                color: $color-grey;
+            }
+
+            p:nth-of-type(2) {
+                color: $color-blue;
+            }
+        }
+
+        button {
+            background-color: $color-purple;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+            padding: 0 1em;
+        }
+    }
+
+    button#closeCartBtn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 2em;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+        background-color: $color-background;
+        color: white;
+        padding: 0.25em 0;
+
+        &:hover {
+            background-color: $color-purple;
+            transition: all 200ms;
+        }
+    }
+
+}
+
+
+
+// KEYFRAMES
 @keyframes showLogin {
     from {
         opacity: 0;

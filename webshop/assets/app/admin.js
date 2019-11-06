@@ -26,14 +26,13 @@ class Admin {
                     parseInt(document.getElementById("price").value)
                 )
                 app.shoeContainer.shoes.push(shoe)
-                alert(`${shoe.name} added to the database.`)
+                app.shoeContainer.genIndex()
                 this.clearInputs()
             }
         })
 
         let logoutBtn = document.getElementById('logoutBtn')
         logoutBtn.addEventListener('click', e => {
-            alert("logging out...")
             app.getUser()
         })
     }

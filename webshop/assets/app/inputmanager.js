@@ -8,9 +8,9 @@ class InputManager {
         let shoes = document.getElementById('shoes')
         shoes.addEventListener('click', e => {
             if(e.target.id === "toFavBtn") {
-                app.shoeContainer.shoes[e.target.parentNode.attributes["key"].value].toFavorite()
+                app.shoeContainer.shoes[e.target.parentNode.parentNode.attributes["key"].value].toFavorite()
             } else if(e.target.id === "toCartBtn") {
-                app.shoeContainer.shoes[e.target.parentNode.attributes["key"].value].toCart()
+                app.shoeContainer.shoes[e.target.parentNode.parentNode.attributes["key"].value].toCart()
             }
         })
 
@@ -19,7 +19,15 @@ class InputManager {
         cart.addEventListener('click', e => {
             if(e.target.id === "removeFromCart") {
                 app.shoeContainer.shoes[e.target.parentNode.attributes["key"].value].removeFromCart()
+            } else if(e.target.id === "closeCartBtn") {
+                cart.style.display = "none"
             }
+        })
+
+        // SHOW CART BTN
+        let showCartBtn = document.getElementById('showCartBtn')
+        showCartBtn.addEventListener('click', e => {
+            document.getElementById('cart').style.display = "block"
         })
 
         // FAVORITES DIV
@@ -42,7 +50,6 @@ class InputManager {
         // LOGOUT BUTTON
         let logoutBtn = document.getElementById('logoutBtn')
         logoutBtn.addEventListener('click', e => {
-            alert("logging out...")
             app.getUser()
         })
     }

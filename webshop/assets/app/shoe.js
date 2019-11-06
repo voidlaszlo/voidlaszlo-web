@@ -13,11 +13,18 @@ class Shoe {
         return (
 
             `
-                <h3>${name}</h3>
-                <p>(${type})</p>
+            <div class="shoe-left">
+                <img src="./assets/img/af1.png">
+                <button id="toFavBtn">&hearts;</button>
+            </div>
+            <div class="shoe-right">
+                <div class="shoe-right-text">
+                    <h3>${name}</h3>
+                    <p>(${type})/${whichGender}</p>
+                </div>
                 <p>${price}&euro;</p>
-                <button id="toFavBtn">Favorite &hearts;</button>            
-                <button id="toCartBtn">To Cart</button>            
+                <button id="toCartBtn">To Cart</button>   
+            </div>             
             `
 
         )

@@ -27,7 +27,10 @@ class Favorites {
         for(let item of this.favorites) {
             output.innerHTML += 
             `
-            <p key="${item.id}">${item.name}, ${item.price}&euro; <button id="removeFromFavorite">remove</button></p>
+            <div key="${item.id}" class="favorite-item">
+                <p>${item.name.split(" ")[0]}</p>
+                <button id="removeFromFavorite">x</button>
+            </div>
             `
         }
     }

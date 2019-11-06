@@ -35,12 +35,20 @@ class Cart {
     render() {
         let output = document.getElementById('cart')
         output.innerHTML = ""
+        output.innerHTML += `<p id="cart-total"><span>${this.total}&euro;</span></p>`
         for(let item of this.cart) {
             output.innerHTML += 
             `
-            <p key="${item.id}">${item.name}, ${item.price}&euro; | ${item.quantity} <button id="removeFromCart">remove</button></p>
+            <div key="${item.id}" class="cart-item">
+            <div class="cart-item-text">
+                <p><i class="far fa-check-circle"></i> ${item.name}(${item.price}&euro;)</p>
+                <p>${item.quantity}</p>
+            </div>
+            <button id="removeFromCart">remove</button>
+            </div>
             `
         }
-        output.innerHTML += `<p>Total : ${this.total}&euro;</p>`
+        output.innerHTML += `<button id="closeCartBtn">Close Cart</button>`
+        
     }
 }

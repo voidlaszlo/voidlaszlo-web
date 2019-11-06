@@ -14,7 +14,7 @@ class App {
                 <p>This is a front-end only web shop.</p>
             </div>
             <div class="login-input">
-                <input id="username" type="text" placeholder="username">
+                <input autocomplete="false" id="username" type="text" placeholder="username">
                 <button>Login</button>
             </div>
             <p><a href="https://voidlaszlo.com">www.voidlaszlo.com</a></p>
@@ -50,12 +50,23 @@ class App {
         document.body.innerHTML = `
         <div id="root">
 
-            <div id="cart"></div>
-            <div id="favorites"></div>
+            
+            
 
-            <h1>welcome there, ${this.user.username}<button id="logoutBtn">Logout</button></h1>
+            <header>
+            <h1><small>Hi, </small>${this.user.username}</h1>
+            <div class="header-right">
+                <button id="showCartBtn"><i class="fas fa-shopping-cart"></i></button>
+                <button id="logoutBtn">Logout</button>
+            </div>
+            </header>
+            <div id="favorites"></div>
+            <div id="search-filters">
+                <div id="filters"></div>
+                <div id="search-field"></div>
+            </div>
             <div id="shoes"></div>
-            <div id="filters"></div>
+            <div id="cart"></div>
 
         </div>`
 
