@@ -74,15 +74,17 @@ class Admin {
                 <h1>Hi, <span>Admin</span></h1>
                 <button id="logoutBtn">Logout</button>
             </div>
+            <div id="admin-users"></div>
+            <div id="admin-shoes"></div>
             <div id="addShoes">
+                <h2><i class="fas fa-plus"></i> Add Shoe</h2>
                 <input id="name" type="text" placeholder="name">
                 <input id="type" type="text" placeholder="type">
                 <input id="whichGender" type="text" placeholder="gender(men, woman, both)">
                 <input id="price" type="number" placeholder="price">
                 <button id="addShoe">add</button>
             </div>
-            <div id="admin-users"></div>
-            <div id="admin-shoes"></div>
+            
         </div>
             
             `
