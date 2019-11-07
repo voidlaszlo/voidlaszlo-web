@@ -23,7 +23,7 @@ class Favorites {
 
     render() {
         let output = document.getElementById('favorites')
-        output.innerHTML = ""
+        output.innerHTML = this.favorites.length > 0 ? "" : `<p id="placeholder-fav">No Favorites</p>`
         for(let item of this.favorites) {
             output.innerHTML += 
             `
