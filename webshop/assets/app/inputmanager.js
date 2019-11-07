@@ -40,7 +40,6 @@ class InputManager {
 
         // FILTERS DIV
         let filters = document.getElementById('filters')
-        console.log(filters)
         filters.addEventListener('click', e => {
             if(e.target.attributes["type"].value === "checkbox") {
                 app.shoeContainer.render()

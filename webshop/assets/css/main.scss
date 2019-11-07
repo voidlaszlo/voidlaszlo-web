@@ -252,6 +252,19 @@ div#search-filters {
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+
+            input {
+                appearance: none;
+                border: 2px solid white;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                position: relative;
+
+                &:checked {
+                    background-color: $color-purple;
+                }
+            }
         }
 
     }

@@ -242,6 +242,21 @@ div#search-filters div#filters div.input {
           justify-content: space-between;
 }
 
+div#search-filters div#filters div.input input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+div#search-filters div#filters div.input input:checked {
+  background-color: #965BFE;
+}
+
 div#search-filters div#search-field {
   display: -ms-grid;
   display: grid;

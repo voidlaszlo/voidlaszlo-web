@@ -61,7 +61,7 @@ class ShoeContainer {
             })
 
             filteredShoes.forEach(item => {
-                document.getElementById("shoes").innerHTML += `<div class="shoe" key="${item.id}">${item.render()}</div>`
+                document.getElementById("shoes").innerHTML += `<hr><div class="shoe" key="${item.id}">${item.render()}</div>`
             })
         }
         
