@@ -191,14 +191,16 @@ div#root {
 
 p#placeholder-fav {
     grid-column: 1/4;
-    border: 1px solid $color-grey;
+    border: 1px solid transparent;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
-    color: $color-purple;
+    color: white;
     font-size: 1.4em;
     padding: 2.2em;
     border-radius: 10px;
     text-align: center;
     font-weight: 700;
+    background-color: $color-background;
+    background: linear-gradient(to right, $color-blue, $color-purple);
 
     animation: showLogin 1s;
 }

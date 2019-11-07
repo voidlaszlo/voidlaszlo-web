@@ -77,7 +77,7 @@ class App {
         this.shoeContainer.render()
         this.shoeContainer.filterShoes()
         this.inputManager = new InputManager()
-        document.querySelector('header').scrollIntoView()
+        document.body.scrollIntoView()
     }
 }
 
