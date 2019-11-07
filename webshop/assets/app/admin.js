@@ -55,7 +55,7 @@ class Admin {
 
     populateShoes() {
         let adminShoes = document.getElementById('admin-shoes')
-        adminShoes.innerHTML = "<h2>Shoes</h2>"
+        adminShoes.innerHTML = `<h2><i class="fas fa-sitemap"></i> Shoes</h2>`
         for(let shoe of app.shoeContainer.shoes) {
             adminShoes.innerHTML += 
             `
