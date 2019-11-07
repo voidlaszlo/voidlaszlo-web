@@ -1,5 +1,5 @@
 class Shoe {
-    constructor(name, type, whichGender, price) {
+    constructor(name = "Default", type = "Sneaker", whichGender = "both", price = 50) {
         this.name = name
         this.type = type
         this.whichGender = whichGender

@@ -62,11 +62,15 @@ class App {
             </header>
             <div id="favorites"></div>
             <div id="search-filters">
+                <h2>Filters</h2>
                 <div id="filters"></div>
                 <div id="search-field"></div>
             </div>
             <div id="shoes"></div>
             <div id="cart"></div>
+            <footer>
+                <p><a href="https://voidlaszlo.com">www.voidlaszlo.com</a></p>
+            </footer>
 
         </div>`
 
