@@ -110,7 +110,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 3em;
+  padding-top: 1em;
 }
 
 header h1 {
