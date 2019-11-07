@@ -191,7 +191,7 @@ div#root {
 
 p#placeholder-fav {
     grid-column: 1/4;
-    border: 1px solid white;
+    border: 0px solid white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
     color: white;
     font-size: 1.4em;
@@ -256,7 +256,7 @@ div#search-filters {
     div#filters {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        border: 1px solid transparent;
+        border: 1px solid $color-grey;
         padding: 1em 0.25em;
         border-radius: 5px;
         color: white;
@@ -377,10 +377,9 @@ div#shoes {
                 min-width: 100px;
                 height: 35px;
                 justify-self: center;
-                background-color: $color-background;
-                background: linear-gradient(to right, $color-blue, $color-purple);
+                background-color: grey;
                 color: white;
-                border: 1px solid white;
+                border: 0px solid black;
                 font-size: 18px;
                 text-align: center;
                 border-radius: 5px;

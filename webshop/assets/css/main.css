@@ -164,7 +164,7 @@ p#placeholder-fav {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  border: 1px solid white;
+  border: 0px solid white;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
   color: white;
@@ -237,7 +237,7 @@ div#search-filters div#filters {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  border: 1px solid transparent;
+  border: 1px solid #979797;
   padding: 1em 0.25em;
   border-radius: 5px;
   color: white;
@@ -382,11 +382,9 @@ div#shoes div.shoe div.shoe-right button {
   height: 35px;
   -ms-grid-column-align: center;
       justify-self: center;
-  background-color: #444444;
-  background: -webkit-gradient(linear, left top, right top, from(#6EC0FF), to(#965BFE));
-  background: linear-gradient(to right, #6EC0FF, #965BFE);
+  background-color: grey;
   color: white;
-  border: 1px solid white;
+  border: 0px solid black;
   font-size: 18px;
   text-align: center;
   border-radius: 5px;
