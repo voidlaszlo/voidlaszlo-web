@@ -314,6 +314,7 @@ div#shoes div.shoe div.shoe-right div.shoe-right-text h3 {
 
 div#shoes div.shoe div.shoe-right button {
   width: 60%;
+  min-width: 100px;
   height: 35px;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -417,6 +418,152 @@ div#cart button#closeCartBtn:hover {
   transition: all 200ms;
 }
 
+div#admin-ui {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 1em;
+  -webkit-animation: slideDown 1s;
+          animation: slideDown 1s;
+}
+
+div#admin-ui div.admin-top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 1fr;
+      grid-template-columns: 5fr 1fr;
+}
+
+div#admin-ui div.admin-top h1 {
+  -webkit-animation: slideIn 1s;
+          animation: slideIn 1s;
+}
+
+div#admin-ui div.admin-top h1 span {
+  color: #965BFE;
+}
+
+div#admin-ui div.admin-top button {
+  padding: 0.5em;
+  background: none;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  color: #979797;
+}
+
+div#admin-ui div.admin-top button:hover {
+  color: #6EC0FF;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+div#admin-ui div#addShoes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  margin-top: 1em;
+}
+
+div#admin-ui div#addShoes input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #979797;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+  background-color: #444444;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 1.2em;
+  padding: 0.25em 1em;
+}
+
+div#admin-ui div#addShoes button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #965BFE;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+  background-color: #444444;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #965BFE;
+  padding: 1em;
+}
+
+div#admin-ui div#addShoes button:hover {
+  background-color: #965BFE;
+  color: white;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+div#admin-ui div#admin-users {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.25em;
+  margin: 2em 0;
+}
+
+div#admin-ui div#admin-users h2 {
+  color: #979797;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+div#admin-ui div#admin-users h2 i {
+  color: #965BFE;
+}
+
+div#admin-ui div#admin-users p {
+  text-transform: capitalize;
+  border: 1px solid #6EC0FF;
+  padding: 0.25em 1em;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+div#admin-ui div#admin-shoes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 0.25em;
+}
+
+div#admin-ui div#admin-shoes h2 {
+  color: #979797;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+div#admin-ui div#admin-shoes h2 i {
+  color: #965BFE;
+}
+
+div#admin-ui div#admin-shoes p {
+  text-transform: capitalize;
+  border: 1px solid #965BFE;
+  padding: 0.25em 1em;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-animation: showLogin 1s;
+          animation: showLogin 1s;
+}
+
 @-webkit-keyframes showLogin {
   from {
     opacity: 0;
@@ -454,6 +601,28 @@ div#cart button#closeCartBtn:hover {
   70% {
     -webkit-transform: translateX(3%);
             transform: translateX(3%);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  70% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  70% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
 }
 /*# sourceMappingURL=main.css.map */

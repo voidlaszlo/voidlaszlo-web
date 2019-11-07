@@ -329,6 +329,7 @@ div#shoes {
 
             button {
                 width: 60%;
+                min-width: 100px;
                 height: 35px;
                 justify-self: center;
                 background-color: $color-purple;
@@ -426,6 +427,130 @@ div#cart {
 
 }
 
+// ADMIN
+div#admin-ui {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    animation: slideDown 1s;
+
+    div.admin-top {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        
+        h1 {
+            animation: slideIn 1s;
+            span {
+                color: $color-purple;
+            }
+        }
+
+        button {
+            padding: 0.5em;
+            background: none;
+            border: 1px solid $color-grey;
+            border-radius: 5px;
+            color: $color-grey;
+
+            &:hover {
+                color: $color-blue;
+                transition: all 200ms;
+            }
+        }
+    }
+
+    div#addShoes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5em;
+        margin-top: 1em;
+
+        input {
+            width: 100%;
+            height: 100%;
+            border: 1px solid $color-grey;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+            background-color: $color-background;
+            border-radius: 5px;
+            padding-left: 1em;
+            font-size: 1.2em;
+            padding: 0.25em 1em;
+        }
+
+        button {
+            grid-column: 1/3;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $color-purple;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+            background-color: $color-background;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $color-purple;
+            padding: 1em;
+
+            &:hover {
+                background-color: $color-purple;
+                color: white;
+                transition: all 200ms;
+            }
+            
+        }
+    }
+
+    div#admin-users {
+        display : grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.25em;
+        margin: 2em 0;
+
+        h2 {
+            color: $color-grey;
+            grid-column: 1/4;
+
+            i {
+                color: $color-purple;
+            }
+        }
+
+        p {
+            text-transform: capitalize;
+            border: 1px solid $color-blue;
+            padding: 0.25em 1em;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+    }
+
+    div#admin-shoes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.25em;
+
+        h2 {
+            color: $color-grey;
+            grid-column: 1/3;
+
+            i {
+                color: $color-purple;
+            }
+        }
+
+        p {
+            text-transform: capitalize;
+            border: 1px solid $color-purple;
+            padding: 0.25em 1em;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            animation: showLogin 1s;
+        }
+    }
+}
+
 
 
 // KEYFRAMES
@@ -446,5 +571,15 @@ div#cart {
 
     70% {
         transform: translateX(+3%);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    70% {
+        transform: translateY(+10%);
     }
 }

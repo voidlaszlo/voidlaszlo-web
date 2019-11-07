@@ -28,6 +28,7 @@ class Admin {
                 app.shoeContainer.shoes.push(shoe)
                 app.shoeContainer.genIndex()
                 this.clearInputs()
+                this.populateShoes()
             }
         })
 
@@ -35,20 +36,55 @@ class Admin {
         logoutBtn.addEventListener('click', e => {
             app.getUser()
         })
+
+        // SHOE POPULATE
+        this.populateShoes()
+
+        let adminUsers = document.getElementById('admin-users')
+        adminUsers.innerHTML = `<h2><i class="fas fa-users"></i> Users</h2>`
+        for(let user of app.users) {
+            adminUsers.innerHTML +=
+            `
+            <div class="admin-users-item">
+                <p>${user.username}</p>
+            </div>
+            `
+        }
+
+    }
+
+    populateShoes() {
+        let adminShoes = document.getElementById('admin-shoes')
+        adminShoes.innerHTML = "<h2>Shoes</h2>"
+        for(let shoe of app.shoeContainer.shoes) {
+            adminShoes.innerHTML += 
+            `
+            <div class="admin-shoes-item">
+                <p>${shoe.name}</p>
+            </div>
+            `
+        }
     }
 
     render() {
         return (
             `
-            <h1>Hi there, Admin</h1>
-            <div id="addShoe">
+        <div id="admin-ui">
+            <div class="admin-top">
+                <h1>Hi, <span>Admin</span></h1>
+                <button id="logoutBtn">Logout</button>
+            </div>
+            <div id="addShoes">
                 <input id="name" type="text" placeholder="name">
                 <input id="type" type="text" placeholder="type">
                 <input id="whichGender" type="text" placeholder="gender(men, woman, both)">
                 <input id="price" type="number" placeholder="price">
                 <button id="addShoe">add</button>
             </div>
-            <button id="logoutBtn">Logout</button>
+            <div id="admin-users"></div>
+            <div id="admin-shoes"></div>
+        </div>
+            
             `
         )
     }

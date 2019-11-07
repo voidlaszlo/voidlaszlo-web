@@ -5,6 +5,8 @@ class Shoe {
         this.whichGender = whichGender
         this.price = price
         this.quantity = 0
+        this.rating = 0
+        this.comments = []
     }
 
     render() {

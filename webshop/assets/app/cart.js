@@ -22,11 +22,12 @@ class Cart {
                 shoe.quantity--
                 this.total -= shoe.price
                 this.cart.splice(this.cart.indexOf(shoe), 1)
+                document.getElementById('cart').style.display = "none"
             } else if(shoe.quantity > 1) {
                 shoe.quantity--
                 this.total -= shoe.price
             }
-            this.total === 0 ? document.getElementById('cart').innerHTML = "" : this.render()
+            this.total === 0 ? document.getElementById('cart').innerHTML = `<button id="closeCartBtn">Close Cart</button>` : this.render()
         } else {
             alert("shoe not in the cart")
         }
