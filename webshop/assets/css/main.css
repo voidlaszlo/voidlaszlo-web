@@ -237,13 +237,15 @@ div#search-filters div#filters {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  border: 1px solid #979797;
+  border: 1px solid transparent;
   padding: 1em 0.25em;
   border-radius: 5px;
-  color: #979797;
+  color: white;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
   background-color: #444444;
+  background: -webkit-gradient(linear, left top, right top, from(#6EC0FF), to(#965BFE));
+  background: linear-gradient(to right, #6EC0FF, #965BFE);
 }
 
 div#search-filters div#filters div.input {
@@ -271,10 +273,11 @@ div#search-filters div#filters div.input input {
   height: 20px;
   border-radius: 5px;
   position: relative;
+  font-weight: 700;
 }
 
 div#search-filters div#filters div.input input:checked {
-  background-color: #965BFE;
+  background-color: black;
 }
 
 div#search-filters div#search-field {
@@ -365,6 +368,10 @@ div#shoes div.shoe div.shoe-right {
       grid-template-columns: 1fr;
 }
 
+div#shoes div.shoe div.shoe-right div.shoe-right-text {
+  width: 100%;
+}
+
 div#shoes div.shoe div.shoe-right div.shoe-right-text h3 {
   margin-bottom: -5px;
 }
@@ -375,7 +382,9 @@ div#shoes div.shoe div.shoe-right button {
   height: 35px;
   -ms-grid-column-align: center;
       justify-self: center;
-  background-color: #965BFE;
+  background-color: #444444;
+  background: -webkit-gradient(linear, left top, right top, from(#6EC0FF), to(#965BFE));
+  background: linear-gradient(to right, #6EC0FF, #965BFE);
   color: white;
   border: 1px solid transparent;
   font-size: 18px;
@@ -636,7 +645,7 @@ div#admin-ui div#admin-shoes p {
 
 hr {
   border: 2px solid #979797;
-  background-color: white;
+  background-color: #979797;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
