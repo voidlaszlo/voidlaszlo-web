@@ -14,7 +14,7 @@ class Favorites {
 
     remove(shoe) {
         if(!this.favorites.includes(shoe)) {
-            alert("not in the favorities")
+            this.favorites.splice(this.favorites.indexOf(shoe), 1)
         } else {
             this.favorites.splice(this.favorites.indexOf(shoe), 1)
         }

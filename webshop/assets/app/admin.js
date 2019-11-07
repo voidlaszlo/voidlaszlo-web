@@ -69,10 +69,9 @@ class Admin {
             if(e.target.className === "shoe-item") {
                 if(window.confirm(`Do you want to delete ${e.target.innerText} ?`)) {
                     app.shoeContainer.shoes[e.target.attributes["key"].value].removeFromContainer()
-                    app.shoeContainer.genIndex()
-                    console.log(e.target.parentNode.remove())
-                    
-                    return                   
+                    app.shoeContainer.genIndex()                    
+                    e.target.parentNode.remove()
+                    return "removed"              
                 } else {
                     console.log("not deleting")
                     return

@@ -60,7 +60,7 @@ class App {
                 <button id="logoutBtn">Logout</button>
             </div>
             </header>
-            <div id="favorites"></div>
+            <div id="favorites"><p id="placeholder-fav">No Favorites</p></div>
             <div id="search-filters">
                 <h2>Filters</h2>
                 <div id="filters"></div>

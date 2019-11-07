@@ -189,6 +189,18 @@ div#root {
     }
 }
 
+p#placeholder-fav {
+    grid-column: 1/4;
+    border: 1px solid $color-grey;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+    color: $color-purple;
+    font-size: 1.4em;
+    padding: 2.2em;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
 div#favorites {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

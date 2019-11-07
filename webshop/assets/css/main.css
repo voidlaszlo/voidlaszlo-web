@@ -160,6 +160,21 @@ div#root {
   }
 }
 
+p#placeholder-fav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  border: 1px solid #979797;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+  color: #965BFE;
+  font-size: 1.4em;
+  padding: 2.2em;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
 div#favorites {
   display: -ms-grid;
   display: grid;
