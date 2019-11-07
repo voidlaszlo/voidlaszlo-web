@@ -3,7 +3,11 @@ class ShoeContainer {
         this.shoes = [
             new Shoe("Nike Air Force 1", "Sneaker", "both", 85),
             new Shoe("Adidas RMD R1", "Sneaker", "men", 125),
-            new Shoe("Adidas Superstar", "Sneaker", "woman", 75)
+            new Shoe("Nike Jordan 3", "Sneaker", "men", 135),
+            new Shoe("Adidas Yeezy", "Sneaker", "both", 300),
+            new Shoe("Nike Free Run", "Running", "both", 75),
+            new Shoe("Nike Roshe", "Running", "woman", 40),
+            new Shoe("New Balance 3", "Sneaker", "woman", 50),
         ]
         this.genIndex()
         this.checkedFilters = []
