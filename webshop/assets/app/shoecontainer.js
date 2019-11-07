@@ -37,6 +37,10 @@ class ShoeContainer {
         `
     }
 
+    remove(shoe) {
+        this.shoes.splice(this.shoes.indexOf(shoe), 1)
+    }
+
     render() {
         document.getElementById('shoes').innerHTML = "<h2>Shoes</h2>"
         this.checkedFilters = []

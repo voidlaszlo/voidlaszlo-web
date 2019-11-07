@@ -40,13 +40,14 @@ class Admin {
         // SHOE POPULATE
         this.populateShoes()
 
+        // USER POPULATE
         let adminUsers = document.getElementById('admin-users')
         adminUsers.innerHTML = `<h2><i class="fas fa-users"></i> Users</h2>`
         for(let user of app.users) {
             adminUsers.innerHTML +=
             `
             <div class="admin-users-item">
-                <p>${user.username}</p>
+                <p key="${user.id}" onclick="alert('Email from ${user.username} is ${user.email}.')">${user.username}</p>
             </div>
             `
         }
@@ -60,10 +61,24 @@ class Admin {
             adminShoes.innerHTML += 
             `
             <div class="admin-shoes-item">
-                <p>${shoe.name}</p>
+                <p key="${shoe.id}" class="shoe-item">${shoe.name}</p>
             </div>
             `
         }
+        adminShoes.addEventListener('click', e => {
+            if(e.target.className === "shoe-item") {
+                if(window.confirm(`Do you want to delete ${e.target.innerText} ?`)) {
+                    app.shoeContainer.shoes[e.target.attributes["key"].value].removeFromContainer()
+                    app.shoeContainer.genIndex()
+                    console.log(e.target.parentNode.remove())
+                    
+                    return                   
+                } else {
+                    console.log("not deleting")
+                    return
+                }
+            }
+        })
     }
 
     render() {

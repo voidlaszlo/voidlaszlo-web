@@ -47,4 +47,8 @@ class Shoe {
     removeFromCart() {
         app.user.cart.remove(this)
     }
+
+    removeFromContainer() {
+        app.shoeContainer.remove(this)
+    }
 }
